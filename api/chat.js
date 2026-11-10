@@ -68,7 +68,9 @@ async function perguntar(contents) {
       body: JSON.stringify({
         systemInstruction: { parts: [{ text: INSTRUCOES }] },
         contents,
-        generationConfig: { temperature: 0.4, maxOutputTokens: 700 }
+        // Os modelos 2.5 "pensam" antes de responder e esse pensamento gasta o limite de tokens;
+        // sem desligar, respostas um pouco maiores voltavam vazias.
+        generationConfig: { temperature: 0.4, maxOutputTokens: 1200, thinkingConfig: { thinkingBudget: 0 } }
       })
     });
     const data = await r.json().catch(() => ({}));
@@ -77,9 +79,11 @@ async function perguntar(contents) {
       const texto = ((cand.content && cand.content.parts) || []).map((p) => p.text || '').join('').trim();
       if (texto) return { texto, modelo };
       ultimoErro = { status: 502, msg: 'resposta vazia', motivo: cand.finishReason };
+      console.error('[chat] resposta vazia', modelo, cand.finishReason);
       continue;
     }
     ultimoErro = { status: r.status, msg: (data.error && data.error.message) || 'erro', motivo: data.error && data.error.status };
+    console.error('[chat] erro do Gemini', modelo, r.status, ultimoErro.motivo, String(ultimoErro.msg).slice(0, 200));
     // modelo inexistente, sobrecarregado ou com erro temporário: tenta o próximo
     if (![404, 429, 500, 503].includes(r.status)) break;
   }
@@ -99,7 +103,7 @@ module.exports = async (req, res) => {
   // Verificação rápida: /api/chat?teste=1
   if (req.method === 'GET') {
     if (!('teste' in (req.query || {}))) return res.status(405).json({ erro: 'Use POST.' });
-    try { const r = await perguntar([{ role: 'user', parts: [{ text: 'Responda só: ok' }] }]); return res.status(200).json({ ok: true, modelo: r.modelo }); }
+    try { const r = await perguntar([{ role: 'user', parts: [{ text: 'Vocês fazem conserto de armação?' }] }]); return res.status(200).json({ ok: true, modelo: r.modelo, amostra: r.texto.slice(0, 120) }); }
     catch (e) { return res.status(502).json({ ok: false, status: e.status, motivo: e.motivo || null }); }
   }
   if (req.method !== 'POST') return res.status(405).json({ erro: 'Use POST.' });
