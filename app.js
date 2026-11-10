@@ -34,21 +34,7 @@ I+=`<ellipse cx="${L(170-t)}" cy="${L(a)}" rx="4.4" ry="7.5" style="fill:var(--p
 const e=u[Math.round(.09*u.length)];D=`<circle cx="${L(c+e[0])}" cy="${L(r+e[1])}" r="1.9" fill="#e6c88e"/><circle cx="${L(d-e[0])}" cy="${L(r+e[1])}" r="1.9" fill="#e6c88e"/>`}
 return`<svg class="frame-art" viewBox="0 0 340 170" ${n?'aria-hidden="true" focusable="false"':`role="img" aria-label="${l(o)}"`}><defs>${y}</defs><path d="${p}" ${b}/><path d="${m}" ${b}/>${$}${M(p,v)}${M(m,v)}${I}${z}${D}</svg>`}const R=e("#product-grid"),I={tipo:"todos",rosto:null};function P(){
 const t=new Set(re.user()?.favoritos||[]),a=x.filter((e=>("todos"===I.tipo||e.tipo===I.tipo)&&(!I.rosto||e.rostos.includes(I.rosto))));R.innerHTML=a.length?a.map(((e,a)=>function(e,t,a=0){const o=`Ilustração do estilo ${e.nome}, armação ${e.cor.toLowerCase()}`
-;return`<li class="card sd-card" data-id="${e.id}" style="--i:${a%4};--vtn:card-${e.id}">\n"+
-"<div class="card-stage">\n"+
-"<div class="card-tilt">${k(y[e.shape],e.paint,e.lens,o)}</div>\n"+
-"<span class="card-sheen" aria-hidden="true"></span>\n"+
-"<div class="card-tags"><span class="tag">${S(e.tipo)}</span>${e.tag?`<span class="tag tag-trend">${e.tag}</span>`:""}</div>\n"+
-"<button class="fav-btn" type="button" data-fav="${e.id}" aria-pressed="${t}" aria-label="${t?`Remover ${e.nome} dos favoritos`:`Salvar ${e.nome} nos favoritos`}"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></button>\n"+
-"</div>\n"+
-"<div class="card-body">\n"+
-"<h3>${e.nome}</h3>\n"+
-"<p class="card-desc">${e.desc}</p>\n"+
-"<dl class="specs">\n"+
-"<div><dt>Material</dt><dd>${e.material}</dd></div>\n"+
-"<div><dt>Cor</dt><dd>${e.cor}</dd></div>\n"+
-"<div><dt>Lentes</dt><dd>${"solar"===e.tipo?"Proteção UV400":"Conforme a sua receita"}</dd></div>\n"+
-"<div><dt>Medidas</dt><dd>${function([e,t,a]){
+;return`<li class="card sd-card" data-id="${e.id}" style="--i:${a%4};--vtn:card-${e.id}">\n      <div class="card-stage">\n        <div class="card-tilt">${k(y[e.shape],e.paint,e.lens,o)}</div>\n        <span class="card-sheen" aria-hidden="true"></span>\n        <div class="card-tags"><span class="tag">${S(e.tipo)}</span>${e.tag?`<span class="tag tag-trend">${e.tag}</span>`:""}</div>\n        <button class="fav-btn" type="button" data-fav="${e.id}" aria-pressed="${t}" aria-label="${t?`Remover ${e.nome} dos favoritos`:`Salvar ${e.nome} nos favoritos`}"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></button>\n      </div>\n      <div class="card-body">\n        <h3>${e.nome}</h3>\n        <p class="card-desc">${e.desc}</p>\n        <dl class="specs">\n          <div><dt>Material</dt><dd>${e.material}</dd></div>\n          <div><dt>Cor</dt><dd>${e.cor}</dd></div>\n          <div><dt>Lentes</dt><dd>${"solar"===e.tipo?"Proteção UV400":"Conforme a sua receita"}</dd></div>\n          <div><dt>Medidas</dt><dd>${function([e,t,a]){
 return`<span class="measure" title="Aro, ponte e haste, em milímetros"><span class="sr-only">Aro ${e} mm, ponte ${t} mm, haste ${a} mm</span><span aria-hidden="true">${e}</span><span class="box" aria-hidden="true"></span><span aria-hidden="true">${t}</span><span class="gap" aria-hidden="true"></span><span aria-hidden="true">${a}</span></span>`
 }(e.medidas)}</dd></div>\n        </dl>\n        <div class="card-actions"><button class="btn btn-ghost btn-sm" type="button" data-try="${e.id}"><svg class="icon" aria-hidden="true"><use href="#i-glasses"/></svg>Quero provar</button></div>\n      </div>\n    </li>`
 }(e,t.has(e.id),a))).join(""):'<li class="empty">Nenhum estilo com esses filtros. Tente outro formato de rosto ou veja todos os tipos.</li>';const o=a.length,n="solar"===I.tipo?1===o?"solar":"solares":"receituario"===I.tipo?1===o?"receituário":"receituários":1===o?"estilo":"estilos"
@@ -164,72 +150,7 @@ drag:0,vel:0,tilt:0,tiltT:0,dragging:!1,lastX:0,lastY:0,lastT:0,lastInteract:0,f
 ;let g,b,x,$,M,S,A,T,E,L,C,R,I,P,q,z,D,G,B,F,_,V,O,j=0,Y=null,X={},N=[],H=0,W=!1,Q=!document.hidden,Z=1/0,J=0,K=!1,ee=0,te=18,ae=10,oe=.25,ne="",se=0,re=0
 ;const ie=(e,t,a)=>Math.max(t,Math.min(a,e)),le=e=>ie(e,0,1),ce=e=>1-Math.pow(1-e,3),de=e=>e<.5?4*e*e*e:1-Math.pow(-2*e+2,3)/2,ue=e=>1+2.4*Math.pow(e-1,3)+1.4*Math.pow(e-1,2),me=e=>getComputedStyle(a).getPropertyValue(e).trim();function pe(){
 e("#fallback-glasses").innerHTML=k(y.heroi,p.frame,"solar"===p.lens?"degrade":null,"",!0)}
-const ve="varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position.xy, 0.0, 1.0); }",he="\n"+
-"varying vec2 vUv;\n"+
-"uniform sampler2D uText; uniform float uUseText; uniform vec2 uSeed;\n"+
-"uniform vec3 uBase; uniform vec3 uVein; uniform vec3 uGold; uniform vec3 uInk;\n"+
-"uniform float uAspect; uniform float uVeinAmt; uniform float uGoldAmt; uniform float uCloud;\n"+
-"float hash(vec2 p){ p = fract(p * vec2(234.34, 435.345)); p += dot(p, p + 34.23); return fract(p.x * p.y); }\n"+
-"float noise(vec2 p){ vec2 i = floor(p); vec2 f = fract(p); vec2 u = f * f * (3.0 - 2.0 * f);\n"+
-"float a = hash(i), b = hash(i + vec2(1.0, 0.0)), c = hash(i + vec2(0.0, 1.0)), d = hash(i + vec2(1.0, 1.0));\n"+
-"return mix(mix(a, b, u.x), mix(c, d, u.x), u.y); }\n"+
-"float fbm(vec2 p){ float v = 0.0; float a = 0.5; mat2 m = mat2(1.6, 1.2, -1.2, 1.6);\n"+
-"for (int i = 0; i < 6; i++){ v += a * noise(p); p = m * p; a *= 0.5; } return v; }\n"+
-"void main(){\n"+
-"vec2 p = vec2(vUv.x * uAspect, vUv.y) * 2.6 + uSeed;\n"+
-"vec2 q = vec2(fbm(p), fbm(p + vec2(5.2, 1.3)));\n"+
-"float n = fbm(p + 2.4 * q);\n"+
-"float v1 = 1.0 - abs(sin(p.x * 0.85 + p.y * 1.4 + n * 6.0));\n"+
-"float vein = pow(v1, 18.0) * 0.5 + pow(v1, 90.0) * 0.7;\n"+
-"float v2 = 1.0 - abs(sin(p.x * 2.4 - p.y * 0.8 + fbm(p * 1.9 + q * 2.0) * 7.5));\n"+
-"float vein2 = pow(v2, 46.0) * smoothstep(0.42, 0.72, fbm(p * 0.9 + 8.0));\n"+
-"float v3 = 1.0 - abs(sin(p.x * 0.45 + p.y * 0.62 + n * 3.4 + 1.3));\n"+
-"float gold = pow(v3, 140.0) * smoothstep(0.46, 0.7, fbm(p * 0.7 + 4.0));\n"+
-"float calm = mix(0.3, 1.0, smoothstep(0.04, 0.52, vUv.y));\n"+
-"float cloud = fbm(p * 0.6 + q) - 0.5;\n"+
-"vec3 col = uBase * (1.0 + cloud * uCloud);\n"+
-"col = mix(col, uVein, clamp((vein + vein2 * 0.6) * uVeinAmt * calm, 0.0, 1.0));\n"+
-"col = mix(col, uGold, clamp(gold * uGoldAmt * 1.8 * calm, 0.0, 1.0));\n"+
-"col = mix(col, uInk, texture2D(uText, vUv).a * uUseText);\n"+
-"gl_FragColor = vec4(col, 1.0);\n"+
-"#include <colorspace_fragment>\n"+
-"}",fe="\n"+
-"attribute vec2 aLocal; attribute float aR;\n"+
-"varying vec2 vLocal; varying float vR; varying vec3 vN; varying vec3 vV;\n"+
-"void main(){\n"+
-"vLocal = aLocal; vR = aR;\n"+
-"vec4 mv = modelViewMatrix * vec4(position, 1.0);\n"+
-"vV = mv.xyz; vN = normalize(normalMatrix * normal);\n"+
-"gl_Position = projectionMatrix * mv;\n"+
-"}",ge="\n"+
-"uniform sampler2D uBg; uniform vec2 uRes; uniform vec2 uCenter; uniform float uLensR; uniform float uAspect;\n"+
-"uniform float uMag; uniform float uSun; uniform vec3 uTintTop; uniform vec3 uTintBot;\n"+
-"uniform vec2 uShadowC; uniform vec2 uShadowR; uniform float uShadowAmt;\n"+
-"varying vec2 vLocal; varying float vR; varying vec3 vN; varying vec3 vV;\n"+
-"float shadowAt(vec2 uv){ vec2 d = (uv - uShadowC) / uShadowR; return exp(-dot(d, d)); }\n"+
-"void main(){\n"+
-"vec2 suv = gl_FragCoord.xy / uRes;\n"+
-"vec3 n = normalize(vN); if (!gl_FrontFacing) n = -n;\n"+
-"float ndv = clamp(dot(n, normalize(-vV)), 0.0, 1.0);\n"+
-"float k = uMag * (1.0 + 0.4 * (uMag - 1.0) * (1.0 - vR * vR));\n"+
-"vec2 muv = clamp(uCenter + (suv - uCenter) / k, vec2(0.002), vec2(0.998));\n"+
-"vec3 bg = texture2D(uBg, muv).rgb;\n"+
-"bg *= 1.0 - shadowAt(muv) * uShadowAmt;\n"+
-"float edge = smoothstep(0.8, 1.0, vR);\n"+
-"vec3 glass = bg * mix(vec3(0.985, 0.993, 0.99), vec3(0.8, 0.87, 0.86), edge);\n"+
-"float g = clamp(vLocal.y * 0.5 + 0.5, 0.0, 1.0);\n"+
-"vec3 tint = mix(uTintBot, uTintTop, smoothstep(0.05, 0.95, g));\n"+
-"vec3 sunCol = (bg * tint * 1.05 + tint * 0.025) * mix(1.0, 0.72, edge);\n"+
-"vec3 col = mix(glass, sunCol, uSun);\n"+
-"vec2 so = (suv - uCenter) * vec2(uAspect, 1.0) / max(uLensR, 0.0001);\n"+
-"float d = dot(so, normalize(vec2(1.0, 1.15)));\n"+
-"float bands = (smoothstep(0.2, 0.0, abs(d - 0.36)) * 0.55 + smoothstep(0.07, 0.0, abs(d - 0.7)) * 0.4) * (1.0 - smoothstep(0.6, 1.0, vR));\n"+
-"float fres = pow(1.0 - ndv, 4.0);\n"+
-"col += vec3(0.93, 0.96, 1.0) * (bands * mix(0.13, 0.3, uSun) + fres * 0.45);\n"+
-"col += vec3(0.22, 0.42, 0.3) * fres * 0.22 * (1.0 - uSun);\n"+
-"gl_FragColor = vec4(col, 1.0);\n"+
-"#include <colorspace_fragment>\n"+
-"}"
+const ve="varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position.xy, 0.0, 1.0); }",he="\n      varying vec2 vUv;\n      uniform sampler2D uText; uniform float uUseText; uniform vec2 uSeed;\n      uniform vec3 uBase; uniform vec3 uVein; uniform vec3 uGold; uniform vec3 uInk;\n      uniform float uAspect; uniform float uVeinAmt; uniform float uGoldAmt; uniform float uCloud;\n      float hash(vec2 p){ p = fract(p * vec2(234.34, 435.345)); p += dot(p, p + 34.23); return fract(p.x * p.y); }\n      float noise(vec2 p){ vec2 i = floor(p); vec2 f = fract(p); vec2 u = f * f * (3.0 - 2.0 * f);\n        float a = hash(i), b = hash(i + vec2(1.0, 0.0)), c = hash(i + vec2(0.0, 1.0)), d = hash(i + vec2(1.0, 1.0));\n        return mix(mix(a, b, u.x), mix(c, d, u.x), u.y); }\n      float fbm(vec2 p){ float v = 0.0; float a = 0.5; mat2 m = mat2(1.6, 1.2, -1.2, 1.6);\n        for (int i = 0; i < 6; i++){ v += a * noise(p); p = m * p; a *= 0.5; } return v; }\n      void main(){\n        vec2 p = vec2(vUv.x * uAspect, vUv.y) * 2.6 + uSeed;\n        vec2 q = vec2(fbm(p), fbm(p + vec2(5.2, 1.3)));\n        float n = fbm(p + 2.4 * q);\n        float v1 = 1.0 - abs(sin(p.x * 0.85 + p.y * 1.4 + n * 6.0));\n        float vein = pow(v1, 18.0) * 0.5 + pow(v1, 90.0) * 0.7;\n        float v2 = 1.0 - abs(sin(p.x * 2.4 - p.y * 0.8 + fbm(p * 1.9 + q * 2.0) * 7.5));\n        float vein2 = pow(v2, 46.0) * smoothstep(0.42, 0.72, fbm(p * 0.9 + 8.0));\n        float v3 = 1.0 - abs(sin(p.x * 0.45 + p.y * 0.62 + n * 3.4 + 1.3));\n        float gold = pow(v3, 140.0) * smoothstep(0.46, 0.7, fbm(p * 0.7 + 4.0));\n        float calm = mix(0.3, 1.0, smoothstep(0.04, 0.52, vUv.y));\n        float cloud = fbm(p * 0.6 + q) - 0.5;\n        vec3 col = uBase * (1.0 + cloud * uCloud);\n        col = mix(col, uVein, clamp((vein + vein2 * 0.6) * uVeinAmt * calm, 0.0, 1.0));\n        col = mix(col, uGold, clamp(gold * uGoldAmt * 1.8 * calm, 0.0, 1.0));\n        col = mix(col, uInk, texture2D(uText, vUv).a * uUseText);\n        gl_FragColor = vec4(col, 1.0);\n        #include <colorspace_fragment>\n      }",fe="\n      attribute vec2 aLocal; attribute float aR;\n      varying vec2 vLocal; varying float vR; varying vec3 vN; varying vec3 vV;\n      void main(){\n        vLocal = aLocal; vR = aR;\n        vec4 mv = modelViewMatrix * vec4(position, 1.0);\n        vV = mv.xyz; vN = normalize(normalMatrix * normal);\n        gl_Position = projectionMatrix * mv;\n      }",ge="\n      uniform sampler2D uBg; uniform vec2 uRes; uniform vec2 uCenter; uniform float uLensR; uniform float uAspect;\n      uniform float uMag; uniform float uSun; uniform vec3 uTintTop; uniform vec3 uTintBot;\n      uniform vec2 uShadowC; uniform vec2 uShadowR; uniform float uShadowAmt;\n      varying vec2 vLocal; varying float vR; varying vec3 vN; varying vec3 vV;\n      float shadowAt(vec2 uv){ vec2 d = (uv - uShadowC) / uShadowR; return exp(-dot(d, d)); }\n      void main(){\n        vec2 suv = gl_FragCoord.xy / uRes;\n        vec3 n = normalize(vN); if (!gl_FrontFacing) n = -n;\n        float ndv = clamp(dot(n, normalize(-vV)), 0.0, 1.0);\n        float k = uMag * (1.0 + 0.4 * (uMag - 1.0) * (1.0 - vR * vR));\n        vec2 muv = clamp(uCenter + (suv - uCenter) / k, vec2(0.002), vec2(0.998));\n        vec3 bg = texture2D(uBg, muv).rgb;\n        bg *= 1.0 - shadowAt(muv) * uShadowAmt;\n        float edge = smoothstep(0.8, 1.0, vR);\n        vec3 glass = bg * mix(vec3(0.985, 0.993, 0.99), vec3(0.8, 0.87, 0.86), edge);\n        float g = clamp(vLocal.y * 0.5 + 0.5, 0.0, 1.0);\n        vec3 tint = mix(uTintBot, uTintTop, smoothstep(0.05, 0.95, g));\n        vec3 sunCol = (bg * tint * 1.05 + tint * 0.025) * mix(1.0, 0.72, edge);\n        vec3 col = mix(glass, sunCol, uSun);\n        vec2 so = (suv - uCenter) * vec2(uAspect, 1.0) / max(uLensR, 0.0001);\n        float d = dot(so, normalize(vec2(1.0, 1.15)));\n        float bands = (smoothstep(0.2, 0.0, abs(d - 0.36)) * 0.55 + smoothstep(0.07, 0.0, abs(d - 0.7)) * 0.4) * (1.0 - smoothstep(0.6, 1.0, vR));\n        float fres = pow(1.0 - ndv, 4.0);\n        col += vec3(0.93, 0.96, 1.0) * (bands * mix(0.13, 0.3, uSun) + fres * 0.45);\n        col += vec3(0.22, 0.42, 0.3) * fres * 0.22 * (1.0 - uSun);\n        gl_FragColor = vec4(col, 1.0);\n        #include <colorspace_fragment>\n      }"
 ;function we(e,t,a){return new g.ShaderMaterial({uniforms:{uText:{value:e},uUseText:{value:t},uSeed:{value:new g.Vector2(a[0],a[1])},uBase:{value:new g.Color},uVein:{value:new g.Color},uGold:{value:new g.Color},uInk:{value:new g.Color},uAspect:{value:1},uVeinAmt:{value:.7},uGoldAmt:{value:.55},
 uCloud:{value:.07}},vertexShader:ve,fragmentShader:he,depthTest:!1,depthWrite:!1})}function be(e,t=1){const a=e.uniforms,o="dark"===w();a.uBase.value.set(me("--stage-base")||"#E4E7E0"),a.uVein.value.set(me("--stage-vein")||"#A7AE9E"),a.uGold.value.set(me("--stage-gold")||"#BE9A5B"),
 a.uInk.value.set(me("--stage-ink")||"#1B2017"),a.uVeinAmt.value=(o?.95:.7)*t,a.uGoldAmt.value=(o?.85:.55)*t,a.uCloud.value=o?.5:.07}let ye,xe,$e,Me,Se=0,Ae=!0,Te=0,Ee=!1;const Le={x:.32,y:.82,tx:.32,ty:.82,pointer:!1},Ce={x:0,y:0,tx:0,ty:0};let ke=-1,Re=0;const Ie=()=>{
@@ -301,47 +222,7 @@ Y.src=e[1])}();let e=null;try{e=document.createElement("canvas").getContext("web
 antialias:!1,alpha:!1}),q.setPixelRatio(Math.min(window.devicePixelRatio||1,2)),q.outputColorSpace=g.SRGBColorSpace,B=document.createElement("canvas"),F=B.getContext("2d"),_=new g.CanvasTexture(B),_.generateMipmaps=!1,_.minFilter=g.LinearFilter,_.magFilter=g.LinearFilter,
 $e=new g.WebGLRenderTarget(2,2,{depthBuffer:!1,stencilBuffer:!1}),$e.texture.colorSpace=g.SRGBColorSpace,ye=we(De(),0,[3.7,1.9]),xe=ze(ye),Me=new g.ShaderMaterial({uniforms:{uMarble:{value:$e.texture},uLogo:{value:_},uTexel:{value:new g.Vector2(.001,.001)},uLight:{value:new g.Vector2(.32,.82)},
 uAspect:{value:1},uGoldMode:{value:0},uInk:{value:new g.Color},uRim:{value:new g.Color},uGoldA:{value:new g.Color("#F4DEA6")},uGoldB:{value:new g.Color("#8F6127")},uShadow:{value:.22},uReveal:{value:0},uPar:{value:new g.Vector2}},vertexShader:ve,
-fragmentShader:"\n"+
-"varying vec2 vUv;\n"+
-"uniform sampler2D uMarble; uniform sampler2D uLogo; uniform vec2 uTexel; uniform vec2 uLight; uniform float uAspect;\n"+
-"uniform float uGoldMode; uniform vec3 uInk; uniform vec3 uRim; uniform vec3 uGoldA; uniform vec3 uGoldB; uniform float uShadow;\n"+
-"uniform float uReveal; uniform vec2 uPar;\n"+
-"float A(vec2 p){ return texture2D(uLogo, p).a; }\n"+
-"vec3 shade(vec2 p){\n"+
-"vec2 mp = p - uPar * 0.006;\n"+
-"vec2 lp = p + uPar * 0.012;\n"+
-"vec3 marble = texture2D(uMarble, mp).rgb;\n"+
-"float x = lp.x * 0.85 + (1.0 - lp.y) * 0.15;\n"+
-"float f = uReveal * 1.45 - 0.22;\n"+
-"float mask = 1.0 - smoothstep(f - 0.045, f, x);\n"+
-"float sheen = exp(-pow((x - f + 0.03) / 0.011, 2.0)) * (1.0 - step(0.999, uReveal));\n"+
-"float a0 = A(lp);\n"+
-"float a = a0 * mask;\n"+
-"vec2 e1 = uTexel * 2.0, e2 = uTexel * 5.0;\n"+
-"float gx = (A(lp + vec2(e1.x, 0.0)) - A(lp - vec2(e1.x, 0.0)) + 0.6 * (A(lp + vec2(e2.x, 0.0)) - A(lp - vec2(e2.x, 0.0)))) * mask;\n"+
-"float gy = (A(lp + vec2(0.0, e1.y)) - A(lp - vec2(0.0, e1.y)) + 0.6 * (A(lp + vec2(0.0, e2.y)) - A(lp - vec2(0.0, e2.y)))) * mask;\n"+
-"vec3 n = normalize(vec3(-gx * 1.5, -gy * 1.5, 1.0));\n"+
-"vec2 ld = (uLight - p) * vec2(uAspect, 1.0);\n"+
-"vec3 L = normalize(vec3(ld, 0.9));\n"+
-"float diff = clamp(dot(n, L), 0.0, 1.0);\n"+
-"float spec = pow(clamp(dot(n, normalize(L + vec3(0.0, 0.0, 1.0))), 0.0, 1.0), 48.0);\n"+
-"vec2 sd = normalize(ld + vec2(1e-4)) * uTexel;\n"+
-"float sh = (A(lp + sd * 4.0) * 0.6 + A(lp + sd * 9.0) * 0.4) * mask * (1.0 - a);\n"+
-"marble *= 1.0 - sh * uShadow;\n"+
-"marble *= 1.0 + exp(-dot(ld, ld) * 3.0) * 0.05;\n"+
-"float edge = clamp(length(vec2(gx, gy)) * 1.2, 0.0, 1.0);\n"+
-"vec3 ink = uInk * (0.8 + 0.4 * diff) + uRim * (edge * diff * 0.6 + spec * (0.1 + edge * 0.5));\n"+
-"float g = clamp(0.35 + p.y * 0.25 + diff * 0.55, 0.0, 1.0);\n"+
-"vec3 gold = mix(uGoldB, uGoldA, g) * (0.6 + 0.55 * diff) + vec3(1.0, 0.9, 0.7) * spec * (0.35 + edge * 0.8) + uGoldA * edge * diff * 0.35;\n"+
-"vec3 col = mix(marble, mix(ink, gold, uGoldMode), a);\n"+
-"col += mix(uRim, uGoldA, uGoldMode) * sheen * a * 0.85;\n"+
-"return col;\n"+
-"}\n"+
-"void main(){\n"+
-"vec3 col = shade(vUv);\n"+
-"gl_FragColor = vec4(col, 1.0);\n"+
-"#include <colorspace_fragment>\n"+
-"}",
+fragmentShader:"\n      varying vec2 vUv;\n      uniform sampler2D uMarble; uniform sampler2D uLogo; uniform vec2 uTexel; uniform vec2 uLight; uniform float uAspect;\n      uniform float uGoldMode; uniform vec3 uInk; uniform vec3 uRim; uniform vec3 uGoldA; uniform vec3 uGoldB; uniform float uShadow;\n      uniform float uReveal; uniform vec2 uPar;\n      float A(vec2 p){ return texture2D(uLogo, p).a; }\n      vec3 shade(vec2 p){\n        vec2 mp = p - uPar * 0.006;\n        vec2 lp = p + uPar * 0.012;\n        vec3 marble = texture2D(uMarble, mp).rgb;\n        float x = lp.x * 0.85 + (1.0 - lp.y) * 0.15;\n        float f = uReveal * 1.45 - 0.22;\n        float mask = 1.0 - smoothstep(f - 0.045, f, x);\n        float sheen = exp(-pow((x - f + 0.03) / 0.011, 2.0)) * (1.0 - step(0.999, uReveal));\n        float a0 = A(lp);\n        float a = a0 * mask;\n        vec2 e1 = uTexel * 2.0, e2 = uTexel * 5.0;\n        float gx = (A(lp + vec2(e1.x, 0.0)) - A(lp - vec2(e1.x, 0.0)) + 0.6 * (A(lp + vec2(e2.x, 0.0)) - A(lp - vec2(e2.x, 0.0)))) * mask;\n        float gy = (A(lp + vec2(0.0, e1.y)) - A(lp - vec2(0.0, e1.y)) + 0.6 * (A(lp + vec2(0.0, e2.y)) - A(lp - vec2(0.0, e2.y)))) * mask;\n        vec3 n = normalize(vec3(-gx * 1.5, -gy * 1.5, 1.0));\n        vec2 ld = (uLight - p) * vec2(uAspect, 1.0);\n        vec3 L = normalize(vec3(ld, 0.9));\n        float diff = clamp(dot(n, L), 0.0, 1.0);\n        float spec = pow(clamp(dot(n, normalize(L + vec3(0.0, 0.0, 1.0))), 0.0, 1.0), 48.0);\n        vec2 sd = normalize(ld + vec2(1e-4)) * uTexel;\n        float sh = (A(lp + sd * 4.0) * 0.6 + A(lp + sd * 9.0) * 0.4) * mask * (1.0 - a);\n        marble *= 1.0 - sh * uShadow;\n        marble *= 1.0 + exp(-dot(ld, ld) * 3.0) * 0.05;\n        float edge = clamp(length(vec2(gx, gy)) * 1.2, 0.0, 1.0);\n        vec3 ink = uInk * (0.8 + 0.4 * diff) + uRim * (edge * diff * 0.6 + spec * (0.1 + edge * 0.5));\n        float g = clamp(0.35 + p.y * 0.25 + diff * 0.55, 0.0, 1.0);\n        vec3 gold = mix(uGoldB, uGoldA, g) * (0.6 + 0.55 * diff) + vec3(1.0, 0.9, 0.7) * spec * (0.35 + edge * 0.8) + uGoldA * edge * diff * 0.35;\n        vec3 col = mix(marble, mix(ink, gold, uGoldMode), a);\n        col += mix(uRim, uGoldA, uGoldMode) * sheen * a * 0.85;\n        return col;\n      }\n      void main(){\n        vec3 col = shade(vUv);\n        gl_FragColor = vec4(col, 1.0);\n        #include <colorspace_fragment>\n      }",
 depthTest:!1,depthWrite:!1}),G=Me,z=ze(Me),D=new g.OrthographicCamera(-1,1,1,-1,0,1),Ge(),t.addEventListener("pointermove",(e=>{if("mouse"!==e.pointerType)return;const t=n.getBoundingClientRect(),a=(e.clientX-t.left)/t.width,s=1-(e.clientY-t.top)/t.height;Le.tx=a,Le.ty=s+.14,Le.pointer=!0,
 Ce.tx=a-.5,Ce.ty=s-.5,o.matches&&(Le.x=Le.tx,Le.y=Le.ty,_e())})),t.addEventListener("pointerleave",(()=>{Le.pointer=!1,Ce.tx=0,Ce.ty=0})),new ResizeObserver((()=>{clearTimeout(re),re=setTimeout(Fe,80)})).observe(t),new IntersectionObserver((e=>{Ae=e[0].isIntersecting,Oe()})).observe(t),
 document.addEventListener("visibilitychange",Oe),o.addEventListener&&o.addEventListener("change",Oe),n.addEventListener("webglcontextlost",(e=>{e.preventDefault(),t.classList.remove("is-live"),Se&&cancelAnimationFrame(Se),Se=0})),Fe(),
