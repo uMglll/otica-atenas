@@ -1,11 +1,14 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "br.com.oticaatenas.app",
       "sha256_cert_fingerprints": [
-        "9C:B9:F9:31:64:FF:6C:9D:CC:65:2B:0A:AE:F4:2B:C6:A3:93:9F:03:60:65:E6:FF:3C:F0:C2:AA:1F:A8:A9:A2"
+        "9C:B9:F9:31:64:FF:6C:9D:CC:65:2B:0A:AE:F4:2B:C6:A3:93:9F:03:60:65:E6:FF:3C:F0:C2:AA:1F:A8:A9:A2",
+        "D5:C3:AC:AB:26:82:6F:3C:2E:65:93:8F:79:9C:2F:D6:DC:55:C3:54:98:E1:E8:9E:BB:A4:B6:23:2B:F8:01:BA"
       ]
     }
   }
