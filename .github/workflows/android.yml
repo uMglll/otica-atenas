@@ -38,7 +38,7 @@ jobs:
         working-directory: android
         run: |
           set -o pipefail
-          gradle bundleRelease assembleTeste --no-daemon --stacktrace 2>&1 | tee build.log
+          gradle bundleRelease assembleAvaliacao --no-daemon --stacktrace 2>&1 | tee build.log
 
       - name: Publicar o resultado no branch android-build
         if: always()
@@ -46,7 +46,7 @@ jobs:
           mkdir -p out
           cp android/build.log out/ 2>/dev/null || true
           cp android/app/build/outputs/bundle/release/app-release.aab out/ 2>/dev/null || true
-          cp android/app/build/outputs/apk/teste/app-teste.apk out/otica-atenas-teste.apk 2>/dev/null || true
+          cp android/app/build/outputs/apk/avaliacao/app-avaliacao.apk out/otica-atenas-teste.apk 2>/dev/null || true
           cp "$RUNNER_TEMP/teste-sha256.txt" out/ 2>/dev/null || true
           echo "${{ job.status }} ${{ github.sha }}" > out/STATUS
           cd out
