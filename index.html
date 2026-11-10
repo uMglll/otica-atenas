@@ -260,6 +260,10 @@ button{font: inherit;color: inherit}
 .store-address span:last-child{color: var(--muted);font-size: .7em;margin-top: 6px}
 .store-actions{display: flex;flex-wrap: wrap;gap: 10px}
 .store-note{font-size: .95rem;color: var(--muted)}
+.app-card{gap: 14px}
+.app-steps{margin: 0;padding-left: 1.25em;display: grid;gap: 10px;color: var(--ink)}
+.app-steps li{padding-left: 4px;line-height: 1.5}
+.app-steps li::marker{color: var(--bronze);font-weight: 600}
 .store-note a{color: var(--ink);font-weight: 600;text-underline-offset: 3px}
 @media (max-width: 859px){.store-grid{grid-template-columns: 1fr}
 }
@@ -657,6 +661,7 @@ to{clip-path: inset(-20% -6% -20% -6%);transform: none}
 <symbol id="i-glasses" viewBox="0 0 24 24"><circle cx="6.5" cy="14" r="3.8"/><circle cx="17.5" cy="14" r="3.8"/><path d="M10.3 13.3c1.1-.8 2.3-.8 3.4 0M2.7 13.2 4.5 7M21.3 13.2 19.5 7"/></symbol>
 <symbol id="i-send" viewBox="0 0 24 24"><path d="M4.5 11.6 19.5 4.5l-5.6 15-2.4-6.1-7-1.8z"/><path d="m11.5 13.4 3.4-3.4"/></symbol>
 <symbol id="i-camera" viewBox="0 0 24 24"><path d="M3.5 8.6A2.6 2.6 0 0 1 6.1 6h1.8l1.5-2.1h5.2L16.1 6h1.8a2.6 2.6 0 0 1 2.6 2.6v8.3a2.6 2.6 0 0 1-2.6 2.6H6.1a2.6 2.6 0 0 1-2.6-2.6z"/><circle cx="12" cy="12.6" r="3.7"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19.5h14"/></symbol>
 <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5.5 20.5V4"/><path d="M5.5 4.5h11.8l-2.3 4.25 2.3 4.25H5.5"/></symbol>
 <symbol id="f-oval" viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="6.6" ry="9.3"/></symbol>
 <symbol id="f-redondo" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.4"/></symbol>
@@ -678,6 +683,7 @@ to{clip-path: inset(-20% -6% -20% -6%);transform: none}
 <a href="#quiz">Quiz</a>
 <a href="#servicos">Serviços</a>
 <a href="#loja">A loja</a>
+<a href="#app" data-app-link>App</a>
 </nav>
 <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Ativar tema escuro">
 <svg class="icon tt-ico tt-sun" aria-hidden="true"><use href="#i-sun"/></svg>
@@ -702,6 +708,7 @@ to{clip-path: inset(-20% -6% -20% -6%);transform: none}
 <a href="#quiz">Quiz</a>
 <a href="#servicos">Serviços</a>
 <a href="#loja">A loja</a>
+<a href="#app" data-app-link>App para Android</a>
 </nav>
 </header>
 <main id="conteudo">
@@ -874,6 +881,27 @@ to{clip-path: inset(-20% -6% -20% -6%);transform: none}
 </div>
 <p class="store-note">Horários e novidades no Instagram <a href="https://www.instagram.com/otica_atenas/" target="_blank" rel="noopener">@otica_atenas</a>.</p>
 </address>
+</div>
+</section>
+<section class="section app-section" id="app" aria-labelledby="app-title">
+<div class="wrap store-grid">
+<div class="store-copy">
+<h2 id="app-title">A Ótica Atenas no seu Android</h2>
+<p>Instale o app e tenha a coleção, o provador com a câmera, os favoritos e o assistente a um toque, em tela cheia. É grátis e fica sempre atualizado junto com o site.</p>
+<div class="cta-row">
+<a class="btn btn-primary" id="app-download" href="https://otica-atenas.vercel.app/download/otica-atenas.apk" download="otica-atenas.apk"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Baixar o app para Android</a>
+</div>
+<p class="store-note" id="app-note">Para Android 6 ou mais recente, com o Chrome instalado. Arquivo de 0,6 MB. Em breve também na Play Store.</p>
+</div>
+<div class="store-card app-card">
+<p class="store-label"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Como instalar</p>
+<ol class="app-steps">
+<li>Toque em <strong>Baixar o app</strong> e abra o arquivo quando o download terminar.</li>
+<li>Se o Android pedir, toque em <strong>Configurações</strong> e ative <strong>Permitir desta fonte</strong>.</li>
+<li>Volte e toque em <strong>Instalar</strong>. Se aparecer um aviso do Play Protect, toque em <strong>Mais detalhes</strong> e <strong>Instalar mesmo assim</strong>.</li>
+<li>Pronto: o ícone da Ótica Atenas aparece junto com os seus apps.</li>
+</ol>
+</div>
 </div>
 </section>
 </main>
