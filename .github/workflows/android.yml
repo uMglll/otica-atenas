@@ -24,11 +24,21 @@ jobs:
         with:
           gradle-version: '8.14.3'
 
-      - name: Gerar o AAB (sem assinatura; a assinatura é feita fora do repositório)
+      - name: Criar chave temporária para o APK de teste
+        run: |
+          SENHA=$(openssl rand -hex 16)
+          echo "::add-mask::$SENHA"
+          keytool -genkeypair -keystore "$RUNNER_TEMP/teste.jks" -storetype PKCS12 -alias teste -keyalg RSA -keysize 2048 -validity 365 \
+            -storepass "$SENHA" -keypass "$SENHA" -dname "CN=Otica Atenas Teste, O=Otica Atenas, C=BR"
+          keytool -list -v -keystore "$RUNNER_TEMP/teste.jks" -storepass "$SENHA" | grep -m1 'SHA256:' | awk '{print $2}' > "$RUNNER_TEMP/teste-sha256.txt"
+          echo "TESTE_KEYSTORE=$RUNNER_TEMP/teste.jks" >> "$GITHUB_ENV"
+          echo "TESTE_SENHA=$SENHA" >> "$GITHUB_ENV"
+
+      - name: Gerar o AAB (sem assinatura) e o APK de teste
         working-directory: android
         run: |
           set -o pipefail
-          gradle bundleRelease --no-daemon --stacktrace 2>&1 | tee build.log
+          gradle bundleRelease assembleTeste --no-daemon --stacktrace 2>&1 | tee build.log
 
       - name: Publicar o resultado no branch android-build
         if: always()
@@ -36,6 +46,8 @@ jobs:
           mkdir -p out
           cp android/build.log out/ 2>/dev/null || true
           cp android/app/build/outputs/bundle/release/app-release.aab out/ 2>/dev/null || true
+          cp android/app/build/outputs/apk/teste/app-teste.apk out/otica-atenas-teste.apk 2>/dev/null || true
+          cp "$RUNNER_TEMP/teste-sha256.txt" out/ 2>/dev/null || true
           echo "${{ job.status }} ${{ github.sha }}" > out/STATUS
           cd out
           git init -q -b android-build

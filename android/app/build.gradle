@@ -14,9 +14,25 @@ android {
         versionName '1.0.0'
     }
 
+    // Chave temporária criada no GitHub Actions só para o APK de teste.
+    // A chave de upload da Play Store nunca fica no repositório: o AAB sai daqui sem assinatura.
+    signingConfigs {
+        teste {
+            storeFile file(System.getenv('TESTE_KEYSTORE') ?: 'chave-de-teste-ausente.jks')
+            storePassword System.getenv('TESTE_SENHA') ?: ''
+            keyAlias 'teste'
+            keyPassword System.getenv('TESTE_SENHA') ?: ''
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
+        }
+        teste {
+            initWith release
+            signingConfig signingConfigs.teste
+            matchingFallbacks = ['release']
         }
     }
 
