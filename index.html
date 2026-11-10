@@ -1,0 +1,947 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ótica Atenas</title>
+<meta name="description" content="Ótica Atenas, em Catalão – GO: solares e receituários de marcas renomadas, com atendimento humanizado e excelente custo-benefício.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300..700&family=GFS+Didot&display=swap">
+<style> :root{--bg: #EDEFEA;--surface: #F7F8F5;--surface-2: #E3E7DF;--ink: #1B2017;--muted: #586050;--line: #CBD1C3;--accent: #4D5A29;--accent-hover: #3D481F;--accent-ink: #F4F6EF;--accent-soft: #DCE3CA;--bronze: #8C612E;--danger: #9A2B26;--success: #3D6A38;--warn: #A06A1C;--header-bg: rgba(237,239,234,.86);--glass: rgba(247,248,245,.74);--glass-line: rgba(27,32,23,.10);--seg-on: #FFFFFF;--shadow: 0 1px 2px rgba(27,32,23,.06),0 18px 40px -18px rgba(27,32,23,.28);--art-shadow: rgba(27,32,23,.22);--backdrop: rgba(18,22,15,.46);--stage-base: #E4E7E0;--stage-vein: #A7AE9E;--stage-gold: #BE9A5B;--stage-ink: #1B2017;--stage-shadow: .17;--lens-clear: rgba(150,184,196,.16);--lens-glint: rgba(255,255,255,.78);--frame-outline: rgba(27,32,23,.14);--crystal-edge: rgba(62,84,92,.55);--crystal-fill: rgba(255,255,255,.72);--pad: rgba(214,228,232,.8);--pedestal-hi: #FBFCFA;--pedestal-lo: #E5E9E1;--footer-bg: #1B2017;--footer-fg: #E9ECE3;--footer-muted: #A6AD9B;--footer-line: rgba(233,236,227,.14);--grain-o: .035;--font-display: "GFS Didot","Didot","Bodoni 72","Bodoni MT","Libre Bodoni",Georgia,serif;--font-sans: "Commissioner","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;--step--1: .875rem;--step-0: 1.0625rem;--step-1: 1.25rem;--step-2: 1.625rem;--step-3: clamp(1.75rem,2.6vw,2.25rem);--step-4: clamp(2.25rem,4.4vw,3.5rem);--radius-s: 10px;--radius-m: 16px;--radius-l: 24px;--measure: 1240px;--gutter-l: max(clamp(16px,4vw,44px),env(safe-area-inset-left,0px));--gutter-r: max(clamp(16px,4vw,44px),env(safe-area-inset-right,0px));--ease-out: cubic-bezier(.2,.8,.2,1);--logo-img: url(logo.svg)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg: #11140F;--surface: #191D16;--surface-2: #22271F;--ink: #E6E9E0;--muted: #A2A998;--line: #2F352A;--accent: #B9C77E;--accent-hover: #CBD795;--accent-ink: #141810;--accent-soft: #2D3421;--bronze: #D3A062;--danger: #E58B7F;--success: #9CCB8E;--warn: #E0AE5C;--header-bg: rgba(17,20,15,.84);--glass: rgba(25,29,22,.72);--glass-line: rgba(230,233,224,.12);--seg-on: #343B2E;--shadow: 0 1px 2px rgba(0,0,0,.4),0 22px 48px -20px rgba(0,0,0,.75);--art-shadow: rgba(0,0,0,.55);--backdrop: rgba(4,5,3,.62);--stage-base: #131611;--stage-vein: #3E4539;--stage-gold: #8E6C3C;--stage-ink: #E8EBE2;--stage-shadow: .5;--lens-clear: rgba(196,220,230,.08);--lens-glint: rgba(255,255,255,.55);--frame-outline: rgba(255,255,255,.24);--crystal-edge: rgba(214,232,238,.55);--crystal-fill: rgba(255,255,255,.14);--pad: rgba(214,228,232,.35);--pedestal-hi: #2A3025;--pedestal-lo: #171A14;--footer-bg: #0B0D09;--footer-fg: #E6E9E0;--footer-muted: #99A08F;--footer-line: rgba(230,233,224,.12);--grain-o: .05;color-scheme: dark}
+}
+:root[data-theme="dark"]{--bg: #11140F;--surface: #191D16;--surface-2: #22271F;--ink: #E6E9E0;--muted: #A2A998;--line: #2F352A;--accent: #B9C77E;--accent-hover: #CBD795;--accent-ink: #141810;--accent-soft: #2D3421;--bronze: #D3A062;--danger: #E58B7F;--success: #9CCB8E;--warn: #E0AE5C;--header-bg: rgba(17,20,15,.84);--glass: rgba(25,29,22,.72);--glass-line: rgba(230,233,224,.12);--seg-on: #343B2E;--shadow: 0 1px 2px rgba(0,0,0,.4),0 22px 48px -20px rgba(0,0,0,.75);--art-shadow: rgba(0,0,0,.55);--backdrop: rgba(4,5,3,.62);--stage-base: #131611;--stage-vein: #3E4539;--stage-gold: #8E6C3C;--stage-ink: #E8EBE2;--stage-shadow: .5;--lens-clear: rgba(196,220,230,.08);--lens-glint: rgba(255,255,255,.55);--frame-outline: rgba(255,255,255,.24);--crystal-edge: rgba(214,232,238,.55);--crystal-fill: rgba(255,255,255,.14);--pad: rgba(214,228,232,.35);--pedestal-hi: #2A3025;--pedestal-lo: #171A14;--footer-bg: #0B0D09;--footer-fg: #E6E9E0;--footer-muted: #99A08F;--footer-line: rgba(230,233,224,.12);--grain-o: .05;color-scheme: dark}
+*,*::before,*::after{box-sizing: border-box}
+[hidden]{display: none !important}
+html{scroll-behavior: smooth;-webkit-text-size-adjust: 100%;text-size-adjust: 100%}
+html:has(dialog[open]){overflow: hidden}
+body{margin: 0;background: var(--bg);color: var(--ink);font-family: var(--font-sans);font-size: var(--step-0);line-height: 1.6;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale}
+body::before{content: "";position: fixed;inset: 0 0 auto;height: env(safe-area-inset-top,0px);z-index: 60;background: var(--header-bg)}
+::view-transition-old(root),::view-transition-new(root){animation: none;mix-blend-mode: normal}
+::selection{background: var(--accent);color: var(--accent-ink)}
+img,svg,canvas{max-width: 100%}
+a{color: inherit}
+p{margin: 0}
+h1,h2,h3{margin: 0;font-weight: 400;text-wrap: balance}
+button{font: inherit;color: inherit}
+:focus-visible{outline: 2px solid var(--accent);outline-offset: 3px;border-radius: 6px}
+.sr-only{position: absolute !important;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip: rect(0 0 0 0);white-space: nowrap;border: 0}
+.sprite{position: absolute;width: 0;height: 0;overflow: hidden}
+.icon{width: 20px;height: 20px;flex: none;fill: none;stroke: currentColor;stroke-width: 1.6;stroke-linecap: round;stroke-linejoin: round}
+.wrap{max-width: var(--measure);margin-inline: auto;padding-left: var(--gutter-l);padding-right: var(--gutter-r)}
+.skip{position: absolute;left: 12px;top: -60px;z-index: 80;background: var(--ink);color: var(--bg);padding: 10px 14px;border-radius: 10px;text-decoration: none}
+.skip:focus{top: calc(10px + env(safe-area-inset-top,0px))}
+.btn{display: inline-flex;align-items: center;justify-content: center;gap: 8px;min-height: 46px;padding: 0 22px;border-radius: 999px;border: 1px solid transparent;font: 600 .95rem/1.1 var(--font-sans);letter-spacing: .005em;text-decoration: none;cursor: pointer;white-space: nowrap;transition: background-color .2s,color .2s,border-color .2s,box-shadow .2s,transform .45s var(--ease-out)}
+.btn .icon{width: 18px;height: 18px}
+.btn:active{transform: translateY(1px)}
+.btn-primary{background: var(--accent);color: var(--accent-ink);box-shadow: inset 0 1px 0 rgba(255,255,255,.14),0 6px 16px -10px var(--accent)}
+.btn-primary:hover{background: var(--accent-hover)}
+.btn-ghost{background: transparent;color: var(--ink);border-color: var(--line)}
+.btn-ghost:hover{border-color: var(--ink)}
+.btn-quiet{background: var(--surface-2);color: var(--ink)}
+.btn-quiet:hover{background: var(--line)}
+.btn-danger{background: var(--danger);color: var(--surface)}
+.btn-sm{min-height: 38px;padding: 0 16px;font-size: .875rem}
+.btn-block{width: 100%}
+.btn[aria-busy="true"]{opacity: .7;cursor: progress}
+.link-btn{background: none;border: 0;padding: 4px 0;cursor: pointer;color: var(--ink);font-size: var(--step--1);font-weight: 500;text-decoration: underline;text-underline-offset: 3px;text-decoration-color: var(--line)}
+.link-btn:hover{text-decoration-color: currentColor}
+.icon-btn{display: inline-grid;place-items: center;width: 42px;height: 42px;border-radius: 999px;border: 1px solid transparent;background: transparent;cursor: pointer;color: var(--ink);transition: background-color .2s,border-color .2s,transform .45s var(--ease-out)}
+.icon-btn:hover{background: var(--surface-2)}
+.site-header{position: sticky;top: env(safe-area-inset-top,0px);z-index: 50;background: var(--header-bg);-webkit-backdrop-filter: saturate(1.4) blur(14px);backdrop-filter: saturate(1.4) blur(14px);border-bottom: 1px solid var(--glass-line);transition: box-shadow .3s}
+.site-header.is-scrolled{box-shadow: 0 12px 30px -20px rgba(0,0,0,.45)}
+.site-header{transition: box-shadow .3s,transform .5s var(--ease-out)}
+.header-bar{display: flex;align-items: center;gap: 12px;height: 66px;max-width: calc(var(--measure) + 200px);margin-inline: auto;padding-left: var(--gutter-l);padding-right: var(--gutter-r)}
+.brand{display: inline-flex;align-items: center;gap: 10px;text-decoration: none;margin-right: auto;min-width: 0}
+.logo{display: block;flex: none;height: 40px;aspect-ratio: 900 / 541;max-width: 100%;background-color: currentColor;-webkit-mask: var(--logo-img) center / contain no-repeat;mask: var(--logo-img) center / contain no-repeat}
+.brand .logo{color: var(--ink)}
+.brand-tag{font-size: .72rem;line-height: 1.25;color: var(--muted);padding-left: 11px;border-left: 1px solid var(--line);max-width: 6.6rem}
+.brand-text{display: grid;line-height: 1.05;min-width: 0}
+.brand-name{font-family: var(--font-display);font-size: 1.35rem;letter-spacing: .01em;white-space: nowrap}
+.brand-sub{font-size: .72rem;color: var(--muted);letter-spacing: .02em;white-space: nowrap}
+.main-nav{display: flex;gap: 4px;margin-right: 8px}
+.main-nav a{text-decoration: none;font-size: .95rem;font-weight: 500;color: var(--muted);padding: 8px 12px;border-radius: 999px;transition: color .2s,background-color .2s}
+.main-nav a:hover{color: var(--ink);background: var(--surface-2)}
+.theme-toggle{transition: transform .45s var(--ease-out);position: relative;width: 62px;height: 34px;flex: none;border-radius: 999px;border: 1px solid var(--line);background: var(--surface-2);cursor: pointer;padding: 0}
+.theme-toggle .tt-ico{position: absolute;top: 50%;width: 16px;height: 16px;transform: translateY(-50%);color: var(--muted);pointer-events: none}
+.theme-toggle .tt-sun{left: 8px}
+.theme-toggle .tt-moon{right: 8px}
+.theme-toggle .tt-thumb{position: absolute;top: 3px;left: 3px;width: 26px;height: 26px;border-radius: 999px;background: var(--surface);box-shadow: 0 1px 3px rgba(0,0,0,.25);display: grid;place-items: center;transition: transform .35s var(--ease-out)}
+.theme-toggle .tt-thumb .icon{width: 15px;height: 15px;color: var(--ink)}
+.theme-toggle[aria-pressed="true"] .tt-thumb{transform: translateX(28px)}
+.theme-toggle .tt-thumb .tt-moon-in{display: none}
+.theme-toggle[aria-pressed="true"] .tt-thumb .tt-sun-in{display: none}
+.theme-toggle[aria-pressed="true"] .tt-thumb .tt-moon-in{display: block}
+.account-btn{display: inline-flex;align-items: center;gap: 8px;height: 40px;padding: 0 14px 0 6px;border-radius: 999px;border: 1px solid var(--line);background: var(--surface);cursor: pointer;font-size: .9rem;font-weight: 600;color: var(--ink);transition: border-color .2s,transform .45s var(--ease-out)}
+.account-btn:hover{border-color: var(--ink)}
+.account-btn .account-ico{width: 28px;height: 28px;border-radius: 999px;display: grid;place-items: center;background: var(--surface-2)}
+.account-btn .account-ico .icon{width: 17px;height: 17px}
+.avatar{display: inline-grid;place-items: center;width: 28px;height: 28px;border-radius: 999px;background: var(--accent);color: var(--accent-ink);font-size: .72rem;font-weight: 700;letter-spacing: .02em}
+.menu-btn{display: none}
+.mobile-nav{border-top: 1px solid var(--glass-line);padding: 8px var(--gutter-r) 14px var(--gutter-l);display: grid;gap: 2px}
+.mobile-nav a{text-decoration: none;padding: 12px 4px;font-size: 1.05rem;font-weight: 500;border-bottom: 1px solid var(--glass-line)}
+.mobile-nav a:last-child{border-bottom: 0}
+@media (max-width: 859px){.main-nav{display: none}
+.menu-btn{display: inline-grid}
+.account-btn .account-label{display: none}
+.account-btn{padding: 0 6px}
+}
+@media (max-width: 400px){.brand-tag{display: none}
+.header-bar{gap: 6px}
+}
+.hero{position: relative}
+.stage{--word-y: .3;position: relative;height: clamp(560px,82vh,800px);background: var(--stage-base);overflow: hidden;isolation: isolate;container-type: size}
+.stage-fallback{position: absolute;inset: 0;transition: opacity .6s ease}
+.stage-word{position: absolute;left: 0;right: 0;top: calc(var(--word-y) * 100%);transform: translateY(-50%);display: flex;justify-content: center;color: var(--stage-ink);user-select: none}
+.stage-word{flex-direction: column;align-items: center;transform: translateY(-40%)}
+.stage-word .logo{height: min(40cqh,82cqw / 1.664)}
+.stage-place{margin-top: min(3.4cqh,2.4cqw);font-family: var(--font-display);font-size: min(4.8cqh,3.3cqw);letter-spacing: .14em}
+.stage-canvas{position: absolute;inset: 0;width: 100%;height: 100%;display: block;opacity: 0;transition: opacity .6s ease}
+.stage.is-live .stage-canvas{opacity: 1}
+.stage.is-live .stage-fallback{opacity: 0}
+.stage::after{content: "";position: absolute;left: 0;right: 0;bottom: 0;height: 30%;z-index: 1;pointer-events: none;background: linear-gradient(to bottom,transparent,var(--bg))}
+.viewer-section{padding-bottom: clamp(24px,4vw,48px)}
+.viewer{--glasses-y: .42;position: relative;height: clamp(460px,72vh,680px);border-radius: var(--radius-l);border: 1px solid var(--line);background: var(--stage-base);overflow: hidden;isolation: isolate;container-type: size}
+.viewer-fallback{position: absolute;inset: 0;transition: opacity .6s ease}
+.viewer-glasses{position: absolute;left: 50%;top: calc(var(--glasses-y) * 100%);width: clamp(240px,52cqw,640px);transform: translate(-50%,-50%);filter: drop-shadow(0 26px 22px var(--art-shadow))}
+.viewer-glasses svg{display: block;width: 100%;height: auto}
+.viewer-canvas{position: absolute;inset: 0;width: 100%;height: 100%;display: block;opacity: 0;transition: opacity .6s ease;cursor: grab;touch-action: pan-y}
+.viewer-canvas:active{cursor: grabbing}
+.viewer-canvas:focus-visible{outline: 2px solid var(--accent);outline-offset: -6px;border-radius: 20px}
+.viewer.is-live .viewer-canvas{opacity: 1}
+.viewer.is-live .viewer-fallback{opacity: 0}
+.viewer-hint{position: absolute;left: 16px;top: 16px;z-index: 2;margin: 0;display: flex;align-items: center;gap: 8px;padding: 8px 12px;font-size: .8rem;color: var(--muted);background: var(--glass);border: 1px solid var(--glass-line);border-radius: 999px;-webkit-backdrop-filter: blur(12px);backdrop-filter: blur(12px);pointer-events: none}
+.viewer-hint .icon{width: 16px;height: 16px;flex: none}
+.hint-touch{display: none}
+@media (hover: none){.hint-mouse{display: none}
+.hint-touch{display: inline}
+}
+.zoom{position: absolute;right: 16px;top: 16px;z-index: 2;display: flex;align-items: center;gap: 2px;padding: 4px;background: var(--glass);border: 1px solid var(--glass-line);border-radius: 999px;-webkit-backdrop-filter: blur(12px);backdrop-filter: blur(12px);box-shadow: var(--shadow)}
+.zoom .icon-btn{width: 36px;height: 36px}
+.zoom .icon-btn:disabled{opacity: .35;cursor: default;background: transparent}
+.zoom-field{display: flex;align-items: center;height: 32px;padding: 0 8px 0 4px;border-radius: 10px;font-size: .85rem;font-weight: 600;cursor: text;transition: background-color .2s}
+.zoom-field:hover,.zoom-field:focus-within{background: var(--surface-2)}
+.zoom-input{width: 2.6rem;border: 0;background: transparent;color: var(--ink);padding: 0;font: inherit;text-align: right;font-variant-numeric: tabular-nums;-moz-appearance: textfield;appearance: textfield}
+.zoom-input::-webkit-outer-spin-button,.zoom-input::-webkit-inner-spin-button{-webkit-appearance: none;margin: 0}
+.zoom-input:focus{outline: none}
+.zoom-field:focus-within{box-shadow: 0 0 0 2px var(--accent)}
+.zoom-fit{border: 0;background: var(--surface-2);color: var(--ink);cursor: pointer;height: 36px;padding: 0 14px;border-radius: 999px;font-size: .82rem;font-weight: 600;margin-left: 4px}
+.zoom-fit:hover{background: var(--line)}
+.viewer .configurator{right: 16px;bottom: 16px}
+@media (max-width: 559px){.zoom-fit{display: none}
+}
+.configurator{position: absolute;z-index: 2;right: var(--gutter-r);bottom: clamp(20px,4cqh,40px);display: grid;gap: 12px;padding: 16px 18px;background: var(--glass);border: 1px solid var(--glass-line);border-radius: var(--radius-m);-webkit-backdrop-filter: blur(16px) saturate(1.3);backdrop-filter: blur(16px) saturate(1.3);box-shadow: var(--shadow)}
+.cfg-row{display: grid;grid-template-columns: 4.6rem auto;align-items: center;gap: 12px}
+.cfg-label{font-size: var(--step--1);color: var(--muted)}
+.cfg-hint{font-size: .8rem;color: var(--muted);display: flex;align-items: center;gap: 6px}
+.cfg-hint .icon{width: 16px;height: 16px}
+.swatch-row{display: flex;align-items: center;gap: 10px}
+.swatches{display: flex;gap: 8px}
+.swatch{width: 30px;height: 30px;padding: 3px;border-radius: 999px;cursor: pointer;border: 1.5px solid transparent;background: transparent;transition: border-color .2s}
+.swatch[aria-pressed="true"]{border-color: var(--ink)}
+.swatch:hover{border-color: var(--muted)}
+.swatch span{display: block;width: 100%;height: 100%;border-radius: 999px;box-shadow: inset 0 0 0 1px rgba(0,0,0,.18)}
+.sw-tartaruga{background: radial-gradient(circle at 30% 32%,#2a1409 0 17%,transparent 18%),radial-gradient(circle at 72% 64%,#2a1409 0 15%,transparent 16%),radial-gradient(circle at 62% 26%,#d08c3e 0 11%,transparent 12%),radial-gradient(circle at 28% 72%,#c07a33 0 10%,transparent 11%),#7a421d}
+.sw-preto{background: radial-gradient(circle at 35% 30%,#4a4d52 0 10%,#16171a 45%)}
+.sw-cristal{background: linear-gradient(135deg,rgba(255,255,255,.95),rgba(190,210,216,.55));box-shadow: inset 0 0 0 1px var(--crystal-edge) !important}
+.swatch-name{font-size: .85rem;font-weight: 500;min-width: 5.5rem}
+.segmented{display: inline-flex;padding: 3px;gap: 2px;border-radius: 999px;background: var(--surface-2);border: 1px solid var(--line)}
+.segmented button{border: 0;background: transparent;cursor: pointer;padding: 7px 14px;border-radius: 999px;font-size: .875rem;font-weight: 500;color: var(--muted);transition: background-color .2s,color .2s,box-shadow .2s}
+.segmented button:hover{color: var(--ink)}
+.segmented button[aria-pressed="true"]{background: var(--seg-on);color: var(--ink);box-shadow: 0 1px 2px rgba(0,0,0,.14),0 0 0 1px var(--glass-line)}
+.hero-copy{position: relative;z-index: 2}
+.hero-copy h1{font-family: var(--font-display);font-size: clamp(2rem,3vw,2.9rem);line-height: 1.05;letter-spacing: -.01em}
+.hero-copy .lede{margin-top: 14px;font-size: 1.0625rem;color: var(--muted);max-width: 44ch}
+.cta-row{display: flex;flex-wrap: wrap;gap: 10px;margin-top: 22px}
+@media (min-width: 860px){.hero-copy{position: absolute;left: var(--gutter-l);bottom: clamp(18px,3vh,30px);max-width: min(40rem,52vw)}
+}
+@media (max-width: 859px){.stage{--word-y: .44;height: clamp(320px,50vh,440px)}
+.viewer{--glasses-y: .36;height: clamp(500px,78vh,600px)}
+.zoom{top: 12px;right: 12px}
+.viewer-hint{left: 12px;top: 12px;max-width: calc(100% - 196px)}
+.viewer .configurator{left: 12px;right: 12px;bottom: 12px;grid-template-columns: 1fr;gap: 10px;padding: 12px 14px}
+.cfg-row{grid-template-columns: 4.2rem auto;justify-content: start}
+.hero-copy{padding: 28px var(--gutter-r) 8px var(--gutter-l)}
+.hero-copy .lede{max-width: 60ch}
+}
+@media (max-width: 420px){.swatch-name{display: none}
+.segmented button{padding: 7px 12px}
+}
+.section{padding-block: clamp(72px,10vw,128px);scroll-margin-top: 66px}
+.section-head{display: grid;gap: 14px;max-width: 48rem;margin-bottom: clamp(28px,4vw,48px)}
+.section-head h2{font-family: var(--font-display);font-size: var(--step-4);line-height: 1.04;letter-spacing: -.012em}
+.section-head p{color: var(--muted);max-width: 62ch;font-size: 1.0625rem}
+.filters{display: flex;flex-wrap: wrap;align-items: end;gap: 18px 32px;padding-bottom: 20px;border-bottom: 1px solid var(--line)}
+.filter-group{display: grid;gap: 8px;min-width: 0}
+.filter-label{font-size: var(--step--1);color: var(--muted)}
+.chips{display: flex;flex-wrap: wrap;gap: 8px}
+.chip{display: inline-flex;align-items: center;gap: 7px;min-height: 38px;padding: 0 14px 0 10px;border-radius: 999px;border: 1px solid var(--line);background: var(--surface);cursor: pointer;font-size: .875rem;font-weight: 500;color: var(--ink);transition: border-color .2s,background-color .2s,color .2s}
+.chip .icon{width: 18px;height: 18px;color: var(--muted)}
+.chip:hover{border-color: var(--ink)}
+.chip[aria-pressed="true"]{background: var(--ink);color: var(--bg);border-color: var(--ink)}
+.chip[aria-pressed="true"] .icon{color: var(--bg)}
+.collection-status{display: flex;flex-wrap: wrap;align-items: baseline;justify-content: space-between;gap: 6px 20px;margin: 22px 0 22px}
+.result-count{font-weight: 600}
+.face-tip{color: var(--muted);max-width: 64ch}
+.grid{list-style: none;margin: 0;padding: 0;display: grid;gap: clamp(14px,1.8vw,22px);grid-template-columns: repeat(4,minmax(0,1fr))}
+@media (max-width: 1099px){.grid{grid-template-columns: repeat(2,minmax(0,1fr))}
+}
+@media (max-width: 599px){.grid{grid-template-columns: minmax(0,1fr)}
+}
+.empty{grid-column: 1 / -1;padding: 40px 24px;text-align: center;border: 1px dashed var(--line);border-radius: var(--radius-l);color: var(--muted)}
+.card{display: flex;flex-direction: column;min-width: 0;background: var(--surface);border: 1px solid var(--line);border-radius: var(--radius-l);overflow: hidden}
+.card-stage{--rx: 0deg;--ry: 0deg;--mx: 50%;--my: 30%;position: relative;aspect-ratio: 16 / 11;max-width: 100%;display: grid;place-items: center;perspective: 900px;background: radial-gradient(110% 85% at 50% 28%,var(--pedestal-hi),var(--pedestal-lo))}
+.card-tilt{width: 88%;transform-style: preserve-3d;transform: rotateX(var(--rx)) rotateY(var(--ry));transition: transform .6s var(--ease-out)}
+.card-stage.is-tilting .card-tilt{transition-duration: .12s}
+.card-tilt{position: relative}
+.card-tilt::after{content: "";position: absolute;left: 16%;right: 16%;bottom: -16%;height: 16%;border-radius: 50%;background: radial-gradient(closest-side,var(--art-shadow),transparent);opacity: .5;pointer-events: none}
+.frame-art{display: block;width: 100%;height: auto;overflow: visible;transform: translateZ(36px);filter: drop-shadow(0 14px 12px var(--art-shadow))}
+.card-sheen{position: absolute;inset: 0;pointer-events: none;opacity: 0;transition: opacity .4s;background: radial-gradient(420px circle at var(--mx) var(--my),rgba(255,255,255,.16),transparent 55%)}
+.card-stage.is-tilting .card-sheen{opacity: 1}
+.card-tags{position: absolute;left: 14px;top: 14px;display: flex;gap: 6px}
+.tag{font-size: .75rem;font-weight: 600;letter-spacing: .01em;padding: 4px 10px;border-radius: 999px;background: var(--surface);color: var(--ink);border: 1px solid var(--line)}
+.tag-trend{background: var(--bronze);color: var(--surface);border-color: transparent}
+.fav-btn{position: absolute;right: 10px;top: 10px;width: 40px;height: 40px;border-radius: 999px;border: 1px solid var(--line);background: var(--surface);color: var(--ink);cursor: pointer;display: grid;place-items: center;transition: transform .45s var(--ease-out),border-color .2s,color .2s}
+.fav-btn:hover{border-color: var(--ink)}
+.fav-btn .icon{width: 19px;height: 19px}
+.fav-btn[aria-pressed="true"]{color: var(--danger);border-color: var(--danger)}
+.fav-btn[aria-pressed="true"] .icon{fill: currentColor}
+.fav-btn.pop{animation: pop .35s var(--ease-out)}
+@keyframes pop{40%{transform: scale(1.18)}
+}
+.card-body{display: flex;flex-direction: column;gap: 10px;padding: 18px 18px 18px;flex: 1}
+.card-body h3{font-family: var(--font-display);font-size: 1.5rem;line-height: 1.1}
+.card-desc{color: var(--muted);font-size: .95rem;line-height: 1.55}
+.specs{margin: 4px 0 0;display: grid;gap: 4px;font-size: .85rem}
+.specs div{display: grid;grid-template-columns: 5.2rem 1fr;gap: 8px}
+.specs dt{color: var(--muted)}
+.specs dd{margin: 0;font-variant-numeric: tabular-nums}
+.measure{display: inline-flex;align-items: center;gap: 2px;white-space: nowrap}
+.measure .box{display: inline-block;width: .62em;height: .62em;border: 1.3px solid currentColor;margin: 0 1px;transform: translateY(-.02em)}
+.measure .gap{width: .4em}
+.card-actions{margin-top: auto;padding-top: 8px;display: flex;gap: 8px}
+.grid-note{margin-top: 22px;font-size: .875rem;color: var(--muted)}
+.card-actions .btn{flex: 1}
+.services{background: var(--surface);border-block: 1px solid var(--line)}
+.steps{list-style: none;margin: 0;padding: 0;display: grid;grid-template-columns: repeat(4,minmax(0,1fr));gap: 28px;position: relative}
+.steps::before{content: "";position: absolute;left: 0;right: 0;top: 30px;height: 1px;background: var(--line)}
+.step{position: relative;display: grid;gap: 10px;align-content: start;min-width: 0}
+.step-n{position: relative;width: 60px;height: 60px;border-radius: 999px;display: grid;place-items: center;background: var(--surface);border: 1px solid var(--line);font-family: var(--font-display);font-size: 1.9rem;line-height: 1;color: var(--bronze)}
+.step h3{font-size: var(--step-1);font-weight: 600;margin-top: 8px}
+.step p{color: var(--muted);font-size: .975rem}
+.extras{margin-top: clamp(40px,6vw,72px);display: grid;grid-template-columns: minmax(0,1fr) minmax(0,2fr);gap: 24px 48px;padding-top: clamp(28px,4vw,40px);border-top: 1px solid var(--line)}
+.extras h3{font-family: var(--font-display);font-size: var(--step-3);line-height: 1.1}
+.extras-list{list-style: none;margin: 0;padding: 0;display: grid;grid-template-columns: repeat(2,minmax(0,1fr));gap: 0 32px}
+.extras-list li{display: flex;gap: 12px;align-items: baseline;padding: 12px 0;border-bottom: 1px solid var(--line)}
+.extras-list li::before{content: "";flex: none;width: 9px;height: 9px;border-radius: 999px;border: 1.5px solid var(--bronze);transform: translateY(-1px)}
+.legal-note{margin-top: 18px;color: var(--muted);font-size: .9rem}
+@media (max-width: 899px){.steps{grid-template-columns: repeat(2,minmax(0,1fr));row-gap: 36px}
+.steps::before{display: none}
+.extras{grid-template-columns: 1fr}
+}
+@media (max-width: 559px){.steps{grid-template-columns: 1fr}
+.extras-list{grid-template-columns: 1fr}
+}
+.store-grid{display: grid;grid-template-columns: minmax(0,1.05fr) minmax(0,1fr);gap: clamp(28px,5vw,72px);align-items: center}
+.store-copy{display: grid;gap: 16px}
+.store-copy h2{font-family: var(--font-display);font-size: var(--step-4);line-height: 1.04;letter-spacing: -.012em}
+.store-copy p{color: var(--muted);max-width: 56ch}
+.store-card{font-style: normal;position: relative;overflow: hidden;padding: clamp(24px,3.4vw,40px);border-radius: var(--radius-l);background: linear-gradient(150deg,var(--glass),transparent 55%),var(--marble-img,none) center / cover,var(--stage-base);border: 1px solid var(--line);box-shadow: var(--shadow);display: grid;gap: 18px}
+.store-card .store-label{display: flex;align-items: center;gap: 8px;color: var(--muted);font-size: var(--step--1)}
+.store-card .store-label .icon{width: 18px;height: 18px;color: var(--bronze)}
+.store-address{font-family: var(--font-display);font-size: clamp(1.75rem,3vw,2.5rem);line-height: 1.12;display: grid}
+.store-address span:last-child{color: var(--muted);font-size: .7em;margin-top: 6px}
+.store-actions{display: flex;flex-wrap: wrap;gap: 10px}
+.store-note{font-size: .95rem;color: var(--muted)}
+.store-note a{color: var(--ink);font-weight: 600;text-underline-offset: 3px}
+@media (max-width: 859px){.store-grid{grid-template-columns: 1fr}
+}
+.site-footer{background: linear-gradient(rgba(8,10,7,.5),rgba(8,10,7,.72)),var(--marble-footer,none) center / cover,var(--footer-bg);color: var(--footer-fg);padding-block: 56px calc(28px + env(safe-area-inset-bottom,0px))}
+.footer-grid{display: grid;grid-template-columns: minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr);gap: 28px 40px}
+.footer-brand{display: flex;align-items: center;gap: 12px}
+.footer-brand{align-items: center}
+.footer-brand .logo{height: 64px;color: var(--footer-fg)}
+.footer-brand .brand-tag{color: var(--footer-muted);border-left-color: var(--footer-line);font-size: .8rem}
+.footer-col{display: grid;gap: 6px;align-content: start;font-size: .95rem}
+.footer-col .fc-label{color: var(--footer-muted);font-size: .8rem}
+.footer-col a{color: var(--footer-fg);text-underline-offset: 3px}
+.footer-legal{margin-top: 40px;padding-top: 20px;border-top: 1px solid var(--footer-line);display: flex;flex-wrap: wrap;justify-content: space-between;gap: 8px 24px;color: var(--footer-muted);font-size: .85rem}
+@media (max-width: 759px){.footer-grid{grid-template-columns: 1fr}
+}
+dialog{border: 0;padding: 0;color: var(--ink);background: var(--surface);max-width: calc(100vw - 24px);max-height: calc(100dvh - 24px)}
+dialog::backdrop{background: var(--backdrop);-webkit-backdrop-filter: blur(3px);backdrop-filter: blur(3px)}
+.modal{width: min(900px,calc(100vw - 24px));border-radius: var(--radius-l);box-shadow: var(--shadow);overflow: auto;overscroll-behavior: contain}
+.modal.small{width: min(520px,calc(100vw - 24px))}
+.modal[open]{animation: dlg-in .34s var(--ease-out)}
+@keyframes dlg-in{from{opacity: 0;transform: translateY(14px) scale(.985)}
+}
+.sheet{margin: 0 0 0 auto;height: 100dvh;max-height: 100dvh;width: min(480px,100vw);max-width: 100vw;border-radius: var(--radius-l) 0 0 var(--radius-l);display: none;flex-direction: column;overflow: hidden;overscroll-behavior: contain;box-shadow: var(--shadow)}
+.sheet[open]{display: flex;animation: sheet-in .38s var(--ease-out)}
+@keyframes sheet-in{from{opacity: 0;transform: translateX(36px)}
+}
+@media (max-width: 599px){.sheet{margin: auto 0 0 0;width: 100vw;height: auto;max-height: 92dvh;border-radius: var(--radius-l) var(--radius-l) 0 0}
+@keyframes sheet-in{from{opacity: 0;transform: translateY(36px)}
+}
+}
+.dialog-close{position: absolute;right: 12px;top: 12px;z-index: 2}
+.dialog-title{font-family: var(--font-display);font-size: var(--step-3);line-height: 1.08}
+.dialog-pad{padding: clamp(22px,3.4vw,36px);padding-top: clamp(26px,3.4vw,40px)}
+.muted{color: var(--muted)}
+.small{font-size: .875rem}
+.auth-grid{display: grid;grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr);min-height: 560px}
+.auth-aside{position: relative;overflow: hidden;padding: 36px 32px;display: flex;flex-direction: column;justify-content: space-between;gap: 24px;background: linear-gradient(180deg,transparent 40%,var(--glass) 100%),var(--marble-img,none) center / cover,var(--stage-base);border-right: 1px solid var(--line)}
+.auth-aside .logo{height: 58px;color: var(--ink)}
+.auth-aside h3{font-family: var(--font-display);font-size: 2rem;line-height: 1.08}
+.auth-aside ul{list-style: none;margin: 0;padding: 0;display: grid;gap: 12px;font-size: .95rem}
+.auth-aside li{display: flex;gap: 10px;align-items: flex-start}
+.auth-aside li .icon{width: 18px;height: 18px;color: var(--accent);margin-top: 3px}
+.auth-aside-art{width: 100%;max-width: 300px;opacity: .95}
+.auth-main{position: relative;padding: clamp(24px,3.4vw,40px);display: grid;gap: 18px;align-content: start}
+.auth-context{background: var(--accent-soft);color: var(--ink);padding: 10px 14px;border-radius: 12px;font-size: .9rem}
+.tabs{display: flex;gap: 4px;border-bottom: 1px solid var(--line)}
+.tab{border: 0;background: transparent;cursor: pointer;padding: 10px 2px;margin-right: 18px;font-size: .95rem;font-weight: 600;color: var(--muted);border-bottom: 2px solid transparent;margin-bottom: -1px}
+.tab[aria-selected="true"]{color: var(--ink);border-bottom-color: var(--ink)}
+.tab .count{font-weight: 500;color: var(--muted);margin-left: 4px;font-variant-numeric: tabular-nums}
+.form{display: grid;gap: 16px}
+.oauth{display: grid;gap: 14px}
+.or{display: flex;align-items: center;gap: 12px;font-size: .8rem;color: var(--muted)}
+.or::before,.or::after{content: "";flex: 1;height: 1px;background: var(--line)}
+.field{display: grid;gap: 6px;min-width: 0;border: 0;padding: 0;margin: 0}
+.field>label,.field>legend{font-size: .875rem;font-weight: 600;padding: 0}
+.optional{font-weight: 400;color: var(--muted)}
+.input{width: 100%;min-height: 48px;padding: 0 14px;border-radius: 12px;border: 1px solid var(--line);background: var(--bg);color: var(--ink);font: inherit;font-size: 1rem;transition: border-color .15s,box-shadow .15s}
+textarea.input{padding: 12px 14px;min-height: 96px;resize: vertical;line-height: 1.5}
+.input::placeholder{color: var(--muted);opacity: .75}
+.input:focus{outline: none;border-color: var(--accent);box-shadow: 0 0 0 3px var(--accent-soft)}
+.input[aria-invalid="true"]{border-color: var(--danger)}
+.pass-wrap{position: relative}
+.pass-wrap .input{padding-right: 52px}
+.pass-toggle{position: absolute;right: 4px;top: 50%;transform: translateY(-50%)}
+.field-error{color: var(--danger);font-size: .85rem}
+.field-error:empty{display: none}
+.form-error{display: grid;gap: 8px;padding: 12px 14px;border-radius: 12px;background: color-mix(in srgb,var(--danger) 12%,transparent);color: var(--ink);font-size: .9rem;border: 1px solid color-mix(in srgb,var(--danger) 40%,transparent)}
+.form-error .link-btn{justify-self: start}
+.strength{display: grid;grid-template-columns: repeat(4,1fr) auto;gap: 6px;align-items: center}
+.strength i{height: 4px;border-radius: 4px;background: var(--line);transition: background-color .25s}
+.strength span{font-size: .8rem;color: var(--muted);min-width: 4.5rem;text-align: right}
+.strength[data-level="1"] i:nth-child(-n+1){background: var(--danger)}
+.strength[data-level="2"] i:nth-child(-n+2){background: var(--warn)}
+.strength[data-level="3"] i:nth-child(-n+3){background: var(--accent)}
+.strength[data-level="4"] i:nth-child(-n+4){background: var(--success)}
+.hint{font-size: .8rem;color: var(--muted)}
+.check{display: flex;gap: 10px;align-items: flex-start;font-size: .9rem;cursor: pointer}
+.check input{width: 18px;height: 18px;margin: 2px 0 0;accent-color: var(--accent);flex: none}
+.auth-note{font-size: .8rem;color: var(--muted);padding-top: 4px;border-top: 1px solid var(--line);padding-top: 14px}
+.form-foot{display: flex;flex-wrap: wrap;justify-content: space-between;gap: 8px;align-items: center}
+@media (max-width: 759px){.auth-grid{grid-template-columns: 1fr;min-height: 0}
+.auth-aside{display: none}
+}
+.sheet-head{position: relative;display: flex;align-items: center;gap: 14px;padding: calc(22px + env(safe-area-inset-top,0px)) 64px 18px 24px;border-bottom: 1px solid var(--line)}
+.sheet-head .avatar{width: 52px;height: 52px;font-size: 1.05rem}
+.sheet-head .dialog-title{font-size: 1.6rem}
+.sheet-head .dialog-close{top: calc(16px + env(safe-area-inset-top,0px))}
+.sheet .tabs{padding: 0 24px}
+.sheet-body{flex: 1;overflow: auto;padding: 20px 24px 24px;overscroll-behavior: contain}
+.sheet-foot{padding: 14px 24px calc(14px + env(safe-area-inset-bottom,0px));border-top: 1px solid var(--line);display: flex;justify-content: space-between;gap: 12px;align-items: center}
+.list{list-style: none;margin: 0;padding: 0;display: grid;gap: 12px}
+.list-item{display: grid;grid-template-columns: 92px minmax(0,1fr);gap: 14px;align-items: center;padding: 12px;border: 1px solid var(--line);border-radius: var(--radius-m);background: var(--bg)}
+.list-item .thumb{aspect-ratio: 16 / 11;border-radius: 12px;display: grid;place-items: center;background: radial-gradient(110% 85% at 50% 28%,var(--pedestal-hi),var(--pedestal-lo))}
+.list-item .thumb svg{width: 86%;height: auto;overflow: visible}
+.list-item h4{margin: 0;font-family: var(--font-display);font-size: 1.2rem;font-weight: 400}
+.list-item p{font-size: .85rem;color: var(--muted)}
+.item-actions{display: flex;flex-wrap: wrap;gap: 6px;margin-top: 8px}
+.order-item{grid-template-columns: 1fr;gap: 6px}
+.order-item .order-head{display: flex;justify-content: space-between;gap: 10px;align-items: baseline}
+.order-item .order-when{font-weight: 600;font-size: .95rem}
+.empty-state{text-align: center;padding: 36px 12px;display: grid;gap: 14px;justify-items: center;color: var(--muted)}
+.empty-state .icon{width: 36px;height: 36px;color: var(--line);stroke-width: 1.3}
+.danger-zone{margin-top: 28px;padding-top: 20px;border-top: 1px solid var(--line);display: grid;gap: 12px}
+.danger-zone h4{margin: 0;font-size: 1rem}
+.confirm-box{display: grid;gap: 12px;padding: 14px;border-radius: 12px;border: 1px solid color-mix(in srgb,var(--danger) 45%,transparent);background: color-mix(in srgb,var(--danger) 9%,transparent)}
+.row{display: flex;flex-wrap: wrap;gap: 10px}
+.choice{position: relative}
+.choice input{position: absolute;opacity: 0;pointer-events: none}
+.choice span{display: inline-block;padding: 7px 16px;border-radius: 999px;cursor: pointer;font-size: .9rem;font-weight: 500;color: var(--muted)}
+.choice input:checked + span{background: var(--seg-on);color: var(--ink);box-shadow: 0 1px 2px rgba(0,0,0,.14),0 0 0 1px var(--glass-line)}
+.choice input:focus-visible + span{outline: 2px solid var(--accent);outline-offset: 2px}
+.message-box{font-size: .95rem;min-height: 150px}
+.done-mark{width: 48px;height: 48px;border-radius: 999px;display: grid;place-items: center;background: var(--accent-soft);color: var(--accent)}
+.done-mark .icon{width: 24px;height: 24px}
+.toasts{position: fixed;left: 50%;transform: translateX(-50%);bottom: calc(20px + env(safe-area-inset-bottom,0px));z-index: 120;display: grid;gap: 8px;width: min(calc(100vw - 32px),440px);pointer-events: none}
+.toast{display: flex;align-items: center;gap: 10px;background: var(--ink);color: var(--bg);padding: 12px 16px;border-radius: 14px;box-shadow: var(--shadow);font-size: .95rem;animation: toast-in .32s var(--ease-out)}
+.toast .icon{width: 18px;height: 18px;flex: none}
+.toast.out{opacity: 0;transform: translateY(8px);transition: opacity .25s,transform .25s}
+@keyframes toast-in{from{opacity: 0;transform: translateY(10px)}
+}
+html.lenis,html.lenis body{height: auto}
+.lenis.lenis-smooth{scroll-behavior: auto !important}
+.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior: contain}
+.lenis.lenis-stopped{overflow: clip}
+.grain{position: fixed;inset: 0;z-index: 90;pointer-events: none;opacity: var(--grain-o);background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 1.1 -.2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size: 180px 180px}
+.hero-copy .w{display: inline-block;overflow: hidden;vertical-align: top;padding: .16em .03em .12em;margin: -.16em -.03em -.12em}
+.hero-copy .w>span{display: inline-block;transform-origin: 0 100%}
+@media (prefers-reduced-motion: no-preference){.site-header{animation: header-in .9s .15s var(--ease-out) backwards}
+.hero-copy .w>span{animation: word-up 1.05s var(--ease-out) backwards;animation-delay: calc(.5s + var(--d) * 60ms)}
+.hero-copy .lede{animation: rise 1s .95s var(--ease-out) backwards}
+.hero-copy .cta-row{animation: rise 1s 1.1s var(--ease-out) backwards}
+.scroll-cue{animation: rise 1s 1.35s var(--ease-out) backwards}
+.stage-word{animation: fallback-in .9s 2.4s var(--ease-out) backwards}
+}
+@keyframes header-in{from{transform: translateY(-100%);opacity: 0}
+}
+@keyframes fallback-in{from{opacity: 0}
+}
+@keyframes word-up{from{transform: translateY(115%) rotate(5deg)}
+}
+@keyframes rise{from{opacity: 0;transform: translateY(22px)}
+}
+.scroll-cue{position: absolute;right: var(--gutter-r);bottom: clamp(18px,3vh,30px);z-index: 2;display: flex;align-items: center;gap: 12px;font-size: .78rem;letter-spacing: .04em;color: var(--muted)}
+.scroll-cue i{position: relative;width: 1px;height: 46px;background: var(--line);overflow: hidden}
+.scroll-cue i::after{content: "";position: absolute;left: 0;top: -40%;width: 1px;height: 40%;background: var(--ink);animation: cue 2.2s cubic-bezier(.6,0,.2,1) infinite}
+@keyframes cue{to{top: 100%}
+}
+@media (max-width: 859px){.scroll-cue{display: none}
+}
+.marquee{position: relative;overflow: hidden;padding-block: clamp(18px,2.8vw,32px);border-block: 1px solid var(--line);background: var(--surface)}
+.marquee-track{display: flex;width: max-content;will-change: transform}
+.mq-group{display: flex;align-items: center;gap: clamp(22px,3vw,44px);padding-right: clamp(22px,3vw,44px)}
+.mq{font-family: var(--font-display);font-size: clamp(2.4rem,6.2vw,5.4rem);line-height: 1.05;white-space: nowrap;color: var(--ink);letter-spacing: -.01em}
+.mq.outline{color: transparent;-webkit-text-stroke: 1.2px var(--ink)}
+.mq-ico{width: clamp(30px,4vw,52px);height: clamp(30px,4vw,52px);flex: none;color: var(--bronze);fill: none;stroke: currentColor;stroke-width: 1.3;stroke-linecap: round;stroke-linejoin: round}
+.cursor-dot,.cursor-ring{position: fixed;left: 0;top: 0;z-index: 2147483000;pointer-events: none;opacity: 0}
+html.has-cursor .cursor-dot,html.has-cursor .cursor-ring{opacity: 1}
+.cursor-dot{width: 6px;height: 6px;margin: -3px 0 0 -3px;border-radius: 50%;background: var(--ink);transition: opacity .25s}
+.cursor-ring{width: 40px;height: 40px;margin: -20px 0 0 -20px;border-radius: 50%;border: 1px solid var(--ink);display: grid;place-items: center;transition: opacity .3s,width .4s var(--ease-out),height .4s var(--ease-out),margin .4s var(--ease-out),background-color .3s,border-color .3s,scale .2s}
+.cursor-ring.is-down{scale: .82}
+.cursor-ring[data-state="link"]{width: 62px;height: 62px;margin: -31px 0 0 -31px;border-color: var(--accent);background: transparent;background: color-mix(in srgb,var(--accent) 14%,transparent)}
+.cursor-ring[data-state="drag"]{width: 74px;height: 74px;margin: -37px 0 0 -37px;border-color: transparent;background: var(--ink);background: color-mix(in srgb,var(--ink) 80%,transparent)}
+.cursor-label{font-size: .72rem;font-weight: 600;letter-spacing: .03em;color: var(--bg);opacity: 0;transition: opacity .2s}
+.cursor-ring[data-state="drag"] .cursor-label{opacity: 1}
+.cursor-dot[data-state="drag"]{opacity: 0}
+html.has-cursor .cursor-ring[data-state="hidden"],html.has-cursor .cursor-dot[data-state="hidden"]{opacity: 0}
+html.has-cursor:not(:has(dialog[open])),html.has-cursor:not(:has(dialog[open])) *{cursor: none !important}
+html.has-cursor:not(:has(dialog[open])) :is(input,textarea){cursor: text !important}
+html.has-cursor:not(:has(dialog[open])) select{cursor: pointer !important}
+html:has(dialog[open]) .cursor-dot,html:has(dialog[open]) .cursor-ring{opacity: 0 !important}
+.site-header.is-hidden:not(:focus-within){transform: translateY(calc(-100% - 2px - env(safe-area-inset-top,0px)));box-shadow: none}
+.vt-cards .card{view-transition-name: var(--vtn)}
+html.vt-filter::view-transition-group(*){animation-duration: .6s;animation-timing-function: cubic-bezier(.2,.8,.2,1)}
+.footer-lead{font-family: var(--font-display);font-size: clamp(1.4rem,2.2vw,1.8rem);line-height: 1.2;max-width: 22ch}
+.footer-mark-wrap{margin-block: clamp(40px,6vw,80px) clamp(4px,1.6vw,20px);display: flex;justify-content: center}
+.footer-mark{height: clamp(120px,21vw,320px);aspect-ratio: 900 / 541;max-width: 100%;background: linear-gradient(105deg,#7a5321 0%,#ead090 18%,#8f6127 36%,#f4dea6 54%,#8f6127 72%,#dcbb7b 90%,#7a5321 100%);background-size: 250% 100%;-webkit-mask: var(--logo-img) center / contain no-repeat;mask: var(--logo-img) center / contain no-repeat;animation: gold-shift 10s linear infinite}
+@keyframes gold-shift{to{background-position: -250% 0}
+}
+@supports (animation-timeline: view()){@media (prefers-reduced-motion: no-preference){.sd-clip{animation: sd-clip linear backwards;animation-timeline: view();animation-range: entry 0% cover 30%}
+.sd-up{animation: sd-up linear backwards;animation-timeline: view();animation-range: entry 0% cover 24%}
+.sd-card{animation: sd-card linear backwards;animation-timeline: view();animation-range: entry calc(var(--i,0) * 4%) cover calc(20% + var(--i,0) * 4%)}
+.sd-swing{animation: sd-swing linear backwards;animation-timeline: view();animation-range: entry 0% cover 40%}
+.sd-zoom{animation: sd-zoom linear backwards;animation-timeline: view();animation-range: entry 0% cover 42%}
+.footer-mark-wrap.sd-clip{animation-range: entry 0% entry 100%}
+.steps::before{transform-origin: 0 50%;animation: sd-line linear backwards;animation-timeline: view();animation-range: entry 10% cover 40%}
+@media (min-width: 860px){.hero-copy{animation: sd-hero-copy linear both;animation-timeline: scroll(root);animation-range: 0 70vh}
+.stage-canvas,.stage-fallback{animation: sd-hero-sink linear both;animation-timeline: scroll(root);animation-range: 0 100vh}
+}
+}
+}
+@keyframes sd-clip{from{clip-path: inset(-20% -6% 100% -6%);transform: translateY(34px)}
+to{clip-path: inset(-20% -6% -20% -6%);transform: none}
+}
+@keyframes sd-up{from{opacity: 0;transform: translateY(38px)}
+}
+@keyframes sd-card{from{opacity: 0;transform: perspective(1200px) rotateX(20deg) translateY(90px) scale(.94)}
+}
+@keyframes sd-swing{from{opacity: 0;transform: perspective(1400px) rotateY(-20deg) rotateX(8deg) translateY(40px)}
+}
+@keyframes sd-zoom{from{opacity: .35;transform: scale(.9)}
+}
+@keyframes sd-line{from{transform: scaleX(0)}
+}
+@keyframes sd-hero-copy{to{opacity: .15;transform: translateY(-60px)}
+}
+@keyframes sd-hero-sink{to{transform: translateY(22%) scale(1.08)}
+}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior: auto}
+*,*::before,*::after{animation-duration: .01ms !important;animation-iteration-count: 1 !important;transition-duration: .01ms !important}
+}
+</style>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false">
+<defs>
+<pattern id="tortoise" patternUnits="userSpaceOnUse" width="64" height="64" patternTransform="rotate(22)">
+<rect width="64" height="64" fill="#7a421d"/>
+<path d="M5 11c7-7 18-3 16 6s-13 9-18 3 0-7 2-9z" fill="#2a1409" opacity=".92"/>
+<path d="M36 3c9-2 15 7 11 13s-13 4-14-2 0-10 3-11z" fill="#3a1c0b" opacity=".88"/>
+<path d="M42 36c8-4 17 2 14 10s-12 8-15 2-3-9 1-12z" fill="#2a1409" opacity=".9"/>
+<path d="M9 40c6-3 13 1 12 8s-10 8-13 3-2-9 1-11z" fill="#4a240e" opacity=".85"/>
+<circle cx="27" cy="29" r="5.5" fill="#c9853a" opacity=".55"/>
+<circle cx="56" cy="22" r="4" fill="#d6984a" opacity=".5"/>
+<circle cx="24" cy="57" r="4.5" fill="#c9853a" opacity=".5"/>
+<circle cx="52" cy="56" r="3" fill="#e2aa5c" opacity=".45"/>
+</pattern>
+<linearGradient id="gold" gradientUnits="userSpaceOnUse" x1="0" y1="20" x2="340" y2="150">
+<stop offset="0" stop-color="#f0d69c"/>
+<stop offset=".35" stop-color="#b8893f"/>
+<stop offset=".6" stop-color="#ecc985"/>
+<stop offset="1" stop-color="#9a6f2e"/>
+</linearGradient>
+</defs>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20.3s-7.6-4.5-9.2-9.2C1.6 7.8 3.7 4.6 7.2 4.6c2 0 3.5 1.1 4.8 2.8 1.3-1.7 2.8-2.8 4.8-2.8 3.5 0 5.6 3.2 4.4 6.5-1.6 4.7-9.2 9.2-9.2 9.2z"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/><path d="M4 4l16 16"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6 6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.6A8 8 0 1 1 9.4 4a6.4 6.4 0 0 0 10.6 10.6z"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8.2" r="3.9"/><path d="M4.3 20.3c1.5-3.9 4.4-5.6 7.7-5.6s6.2 1.7 7.7 5.6"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7.5h16M4 12h16M4 16.5h16"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="11.5" height="11.5" rx="2.5"/><path d="M15.5 8.5V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7.5a2 2 0 0 0 2 2h2.5"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6.1-6.5-11.1a6.5 6.5 0 0 1 13 0C18.5 14.9 12 21 12 21z"/><circle cx="12" cy="9.9" r="2.4"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M20.5 11.5c0 4.4-3.8 8-8.5 8-1.3 0-2.6-.3-3.7-.8L3.5 20l1.3-4.2a7.6 7.6 0 0 1-1.3-4.3c0-4.4 3.8-8 8.5-8s8.5 3.6 8.5 8z"/></symbol>
+<symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9.5 7V4.5h5V7M6.5 7l1 13h9l1-13"/></symbol>
+<symbol id="i-rotate" viewBox="0 0 24 24"><path d="M3.5 12a8.5 8.5 0 0 1 14.6-5.9L20.5 8.5M20.5 4v4.5H16"/><path d="M20.5 12a8.5 8.5 0 0 1-14.6 5.9L3.5 15.5M3.5 20v-4.5H8"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+<symbol id="i-glasses" viewBox="0 0 24 24"><circle cx="6.5" cy="14" r="3.8"/><circle cx="17.5" cy="14" r="3.8"/><path d="M10.3 13.3c1.1-.8 2.3-.8 3.4 0M2.7 13.2 4.5 7M21.3 13.2 19.5 7"/></symbol>
+<symbol id="f-oval" viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="6.6" ry="9.3"/></symbol>
+<symbol id="f-redondo" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.4"/></symbol>
+<symbol id="f-quadrado" viewBox="0 0 24 24"><rect x="4.2" y="3.4" width="15.6" height="17.2" rx="4.6"/></symbol>
+<symbol id="f-coracao" viewBox="0 0 24 24"><path d="M4.8 7.2C4.8 4.6 8 3.2 12 3.2s7.2 1.4 7.2 4c0 5-2.6 10.4-7.2 13.6C7.4 17.6 4.8 12.2 4.8 7.2z"/></symbol>
+<symbol id="f-losango" viewBox="0 0 24 24"><path d="M12 2.6c2.2 2.4 6.8 6.6 6.8 9.4S14.2 19 12 21.4C9.8 19 5.2 14.8 5.2 12S9.8 5 12 2.6z"/></symbol>
+<symbol id="f-alongado" viewBox="0 0 24 24"><rect x="6.4" y="2.4" width="11.2" height="19.2" rx="5.6"/></symbol>
+</svg>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header">
+<div class="header-bar">
+<a class="brand" href="#topo" aria-label="Ótica Atenas, voltar ao início">
+<span class="logo" aria-hidden="true"></span>
+<span class="brand-tag">Solares e Receituários</span>
+</a>
+<nav class="main-nav" aria-label="Principal">
+<a href="#experimente">Em 3D</a>
+<a href="#colecao">Coleção</a>
+<a href="#servicos">Serviços</a>
+<a href="#loja">A loja</a>
+</nav>
+<button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Ativar tema escuro">
+<svg class="icon tt-ico tt-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+<svg class="icon tt-ico tt-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+<span class="tt-thumb" aria-hidden="true">
+<svg class="icon tt-sun-in"><use href="#i-sun"/></svg>
+<svg class="icon tt-moon-in"><use href="#i-moon"/></svg>
+</span>
+</button>
+<button class="account-btn" id="account-btn" type="button" aria-haspopup="dialog">
+<span class="account-ico" id="account-ico"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg></span>
+<span class="avatar" id="account-avatar" hidden></span>
+<span class="account-label" id="account-label">Entrar</span>
+</button>
+<button class="icon-btn menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menu">
+<svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+</button>
+</div>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Menu" hidden>
+<a href="#experimente">Em 3D</a>
+<a href="#colecao">Coleção</a>
+<a href="#servicos">Serviços</a>
+<a href="#loja">A loja</a>
+</nav>
+</header>
+<main id="conteudo">
+<section class="hero" id="topo" aria-labelledby="hero-title">
+<div class="stage" id="stage">
+<div class="stage-fallback" aria-hidden="true">
+<div class="stage-word"><span class="logo"></span><span class="stage-place">Catalão – Goiás</span></div>
+</div>
+<canvas class="stage-canvas" id="stage-canvas" aria-hidden="true"></canvas>
+</div>
+<div class="hero-copy">
+<h1 id="hero-title">Óculos escolhidos com calma e montados com precisão.</h1>
+<p class="lede">Solares e receituários de marcas renomadas, com atendimento humanizado e excelente custo-benefício. São 15 anos de experiência ajudando você a escolher bem.</p>
+<div class="cta-row">
+<a class="btn btn-primary" href="#colecao">Ver a coleção</a>
+<a class="btn btn-ghost" data-maps target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%C3%93tica%20Atenas%2C%20Av.%2020%20de%20Agosto%2C%202431%20-%20Centro%2C%20Catal%C3%A3o%20-%20GO"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Como chegar</a>
+</div>
+</div>
+<div class="scroll-cue" aria-hidden="true"><span>Role para explorar</span><i></i></div>
+</section>
+<div class="marquee" aria-hidden="true">
+<div class="marquee-track" id="marquee-track"><div class="mq-group"><span class="mq">Solares</span><svg class="mq-ico"><use href="#i-glasses"/></svg><span class="mq outline">Receituários</span><svg class="mq-ico"><use href="#i-glasses"/></svg><span class="mq">Atendimento humanizado</span><svg class="mq-ico"><use href="#i-glasses"/></svg><span class="mq outline">Marcas renomadas</span><svg class="mq-ico"><use href="#i-glasses"/></svg><span class="mq">Catalão – Goiás</span><svg class="mq-ico"><use href="#i-glasses"/></svg><span class="mq outline">15 anos de experiência</span><svg class="mq-ico"><use href="#i-glasses"/></svg></div><div class="mq-group"><span class="mq">Solares</span><svg class="mq-ico"><use href="#i-glasses"/></svg><span class="mq outline">Receituários</span><svg class="mq-ico"><use href="#i-glasses"/></svg><span class="mq">Atendimento humanizado</span><svg class="mq-ico"><use href="#i-glasses"/></svg><span class="mq outline">Marcas renomadas</span><svg class="mq-ico"><use href="#i-glasses"/></svg><span class="mq">Catalão – Goiás</span><svg class="mq-ico"><use href="#i-glasses"/></svg><span class="mq outline">15 anos de experiência</span><svg class="mq-ico"><use href="#i-glasses"/></svg></div></div>
+</div>
+<section class="section viewer-section" id="experimente" aria-labelledby="exp-title">
+<div class="wrap">
+<div class="section-head">
+<h2 id="exp-title">Veja cada detalhe</h2>
+<p>Gire os óculos, aproxime para ver o acabamento e troque a lente e a armação. Na loja, você prova com calma.</p>
+</div>
+<div class="viewer" id="viewer">
+<div class="viewer-fallback" aria-hidden="true"><div class="viewer-glasses" id="fallback-glasses"></div></div>
+<canvas class="viewer-canvas" id="viewer-canvas" data-lenis-prevent-wheel tabindex="0" role="img" aria-label="Óculos em 3D. Arraste ou use as setas para girar e inclinar. Use as teclas mais e menos para aproximar."></canvas>
+<p class="viewer-hint" id="viewer-hint"><svg class="icon" aria-hidden="true"><use href="#i-rotate"/></svg><span class="hint-mouse">Arraste para girar e role para aproximar</span><span class="hint-touch">Arraste para girar</span></p>
+<div class="zoom" id="zoom" role="group" aria-label="Zoom">
+<button class="icon-btn" type="button" id="zoom-out" aria-label="Afastar"><svg class="icon" aria-hidden="true"><use href="#i-minus"/></svg></button>
+<label class="zoom-field"><input class="zoom-input" id="zoom-level" type="number" min="50" max="200" step="5" value="100" inputmode="numeric" aria-label="Zoom em porcentagem, de 50 a 200" title="Digite um valor de 50 a 200"><span aria-hidden="true">%</span></label>
+<button class="icon-btn" type="button" id="zoom-in" aria-label="Aproximar"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button>
+<button class="zoom-fit" type="button" id="zoom-fit">Ajustar</button>
+</div>
+<div class="configurator" role="group" aria-label="Personalize os óculos">
+<div class="cfg-row">
+<span class="cfg-label" id="cfg-lente">Lente</span>
+<div class="segmented" role="group" aria-labelledby="cfg-lente">
+<button type="button" data-lens="receituario" aria-pressed="true">Receituário</button>
+<button type="button" data-lens="solar" aria-pressed="false">Solar</button>
+</div>
+</div>
+<div class="cfg-row">
+<span class="cfg-label" id="cfg-armacao">Armação</span>
+<div class="swatch-row">
+<div class="swatches" role="group" aria-labelledby="cfg-armacao">
+<button class="swatch" type="button" data-frame="tartaruga" aria-pressed="true" aria-label="Tartaruga"><span class="sw-tartaruga"></span></button>
+<button class="swatch" type="button" data-frame="preto" aria-pressed="false" aria-label="Preto"><span class="sw-preto"></span></button>
+<button class="swatch" type="button" data-frame="cristal" aria-pressed="false" aria-label="Cristal"><span class="sw-cristal"></span></button>
+</div>
+<span class="swatch-name" id="swatch-name" aria-hidden="true">Tartaruga</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="colecao" aria-labelledby="colecao-title">
+<div class="wrap">
+<div class="section-head">
+<h2 id="colecao-title">Encontre o seu formato</h2>
+<p>Uma amostra dos estilos que você encontra na loja. Filtre por tipo ou pelo formato do seu rosto, salve os favoritos e separe os que quer provar.</p>
+</div>
+<div class="filters">
+<div class="filter-group">
+<span class="filter-label" id="f-tipo">Tipo</span>
+<div class="segmented" role="group" aria-labelledby="f-tipo" id="tipo-filter">
+<button type="button" data-tipo="todos" aria-pressed="true">Todos</button>
+<button type="button" data-tipo="solar" aria-pressed="false">Solares</button>
+<button type="button" data-tipo="receituario" aria-pressed="false">Receituários</button>
+</div>
+</div>
+<div class="filter-group">
+<span class="filter-label" id="f-rosto">Formato do rosto</span>
+<div class="chips" role="group" aria-labelledby="f-rosto" id="rosto-filter">
+<button class="chip" type="button" data-rosto="oval" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#f-oval"/></svg>Oval</button>
+<button class="chip" type="button" data-rosto="redondo" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#f-redondo"/></svg>Redondo</button>
+<button class="chip" type="button" data-rosto="quadrado" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#f-quadrado"/></svg>Quadrado</button>
+<button class="chip" type="button" data-rosto="coracao" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#f-coracao"/></svg>Coração</button>
+<button class="chip" type="button" data-rosto="losango" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#f-losango"/></svg>Losango</button>
+<button class="chip" type="button" data-rosto="alongado" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#f-alongado"/></svg>Alongado</button>
+</div>
+</div>
+</div>
+<div class="collection-status">
+<p class="result-count" id="result-count" aria-live="polite">8 estilos</p>
+<p class="face-tip" id="face-tip">Não sabe o formato do seu rosto? Na loja, a gente ajuda você a descobrir.</p>
+</div>
+<ul class="grid" id="product-grid" role="list"></ul>
+<p class="grid-note">Medidas em milímetros, no padrão gravado na haste: largura do aro, <span class="measure" aria-hidden="true"><span class="box"></span></span> ponte e comprimento da haste.</p>
+</div>
+</section>
+<section class="section services" id="servicos" aria-labelledby="servicos-title">
+<div class="wrap">
+<div class="section-head">
+<h2 id="servicos-title">Da receita ao óculos pronto</h2>
+<p>As lentes de grau são feitas a partir da receita do seu médico oftalmologista. Do resto, a gente cuida com calma e atenção a cada detalhe.</p>
+</div>
+<ol class="steps">
+<li class="step">
+<span class="step-n" aria-hidden="true">1</span>
+<h3>Traga sua receita</h3>
+<p>A prescrição médica é o ponto de partida. Lentes de grau só são confeccionadas a partir dela.</p>
+</li>
+<li class="step">
+<span class="step-n" aria-hidden="true">2</span>
+<h3>Escolha a armação</h3>
+<p>Você prova com calma os modelos que combinam com seu rosto, seu estilo e sua rotina.</p>
+</li>
+<li class="step">
+<span class="step-n" aria-hidden="true">3</span>
+<h3>Defina as lentes</h3>
+<p>Antirreflexo, filtro de luz azul, fotossensíveis ou multifocais, sempre conforme a prescrição.</p>
+</li>
+<li class="step">
+<span class="step-n" aria-hidden="true">4</span>
+<h3>Retire com ajuste</h3>
+<p>Na entrega, ajustamos hastes e plaquetas para o óculos ficar firme e confortável no rosto.</p>
+</li>
+</ol>
+<div class="extras">
+<h3>Também fazemos</h3>
+<div>
+<ul class="extras-list">
+<li>Ajuste de hastes e plaquetas</li>
+<li>Conserto de armações</li>
+<li>Troca de parafusos e plaquetas</li>
+<li>Reposição de lentes riscadas por lentes idênticas</li>
+<li>Solares com proteção UV400</li>
+<li>Opções de lentes polarizadas</li>
+</ul>
+<p class="legal-note">Lentes de grau somente mediante receita médica.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="loja" aria-labelledby="loja-title">
+<div class="wrap store-grid">
+<div class="store-copy">
+<h2 id="loja-title">Venha provar com calma</h2>
+<p>Na loja, você experimenta quantos modelos quiser, recebe ajuda para encontrar o formato certo e sai com o óculos ajustado ao seu rosto. Atendimento humanizado, marcas renomadas e excelente custo-benefício, há 15 anos.</p>
+<p id="store-account-text">Crie sua conta para salvar favoritos e separar estilos para provar. A gente prepara a mensagem para você enviar à loja.</p>
+<div class="cta-row">
+<button class="btn btn-primary" type="button" id="store-account-btn">Criar conta</button>
+<a class="btn btn-ghost" href="https://www.instagram.com/otica_atenas/" target="_blank" rel="noopener">Ver o Instagram</a>
+</div>
+</div>
+<address class="store-card">
+<p class="store-label"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Endereço</p>
+<p class="store-address" id="store-address"><span>Av. 20 de Agosto, 2431</span><span>Centro, Catalão – GO</span></p>
+<div class="store-actions">
+<a class="btn btn-primary" data-maps target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%C3%93tica%20Atenas%2C%20Av.%2020%20de%20Agosto%2C%202431%20-%20Centro%2C%20Catal%C3%A3o%20-%20GO">Abrir no Google Maps</a>
+<button class="btn btn-ghost" type="button" id="copy-address"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg><span>Copiar endereço</span></button>
+</div>
+<p class="store-note">Horários e novidades no Instagram <a href="https://www.instagram.com/otica_atenas/" target="_blank" rel="noopener">@otica_atenas</a>.</p>
+</address>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-grid">
+<div class="footer-brand">
+<p class="footer-lead">Solares e receituários com atendimento humanizado há 15 anos.</p>
+</div>
+<div class="footer-col">
+<span class="fc-label">Endereço</span>
+<span>Av. 20 de Agosto, 2431 – Centro</span>
+<span>Catalão – GO</span>
+</div>
+<div class="footer-col">
+<span class="fc-label">Instagram</span>
+<a href="https://www.instagram.com/otica_atenas/" target="_blank" rel="noopener">@otica_atenas</a>
+<a href="https://ig.me/m/otica_atenas" target="_blank" rel="noopener">Enviar mensagem</a>
+</div>
+</div>
+<div class="footer-legal">
+<p>Lentes de grau somente mediante receita médica.</p>
+<p>© 2026 Ótica Atenas</p>
+</div>
+<div class="footer-mark-wrap"><div class="footer-mark" role="img" aria-label="Ótica Atenas"></div></div>
+</div>
+</footer>
+<!-- Entrar / criar conta -->
+<dialog class="modal" id="auth-dialog" data-lenis-prevent aria-labelledby="auth-title">
+<div class="auth-grid">
+<aside class="auth-aside" aria-hidden="true">
+<span class="logo"></span>
+<div class="auth-aside-art" id="auth-art"></div>
+<div>
+<h3>Sua conta Atenas</h3>
+<ul style="margin-top:16px">
+<li><svg class="icon"><use href="#i-heart"/></svg>Salve os estilos que você mais gostou</li>
+<li><svg class="icon"><use href="#i-calendar"/></svg>Separe armações para provar na loja</li>
+<li><svg class="icon"><use href="#i-chat"/></svg>Receba novidades, se quiser</li>
+</ul>
+</div>
+</aside>
+<div class="auth-main">
+<button class="icon-btn dialog-close" type="button" data-close aria-label="Fechar"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+<h2 class="dialog-title" id="auth-title">Entre na sua conta</h2>
+<p class="auth-context" id="auth-context" hidden></p>
+<div class="tabs" role="tablist" id="auth-tabs">
+<button class="tab" type="button" role="tab" id="tab-login" aria-selected="true" aria-controls="login-form">Entrar</button>
+<button class="tab" type="button" role="tab" id="tab-register" aria-selected="false" aria-controls="register-form" tabindex="-1">Criar conta</button>
+</div>
+<div class="oauth" id="oauth-block">
+<button class="btn btn-ghost btn-block" type="button" id="google-btn">Continuar com o Google</button>
+<p class="or"><span>ou com e-mail</span></p>
+</div>
+<form class="form" id="login-form" role="tabpanel" aria-labelledby="tab-login" novalidate>
+<div class="field">
+<label for="login-email">E-mail</label>
+<input class="input" id="login-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="login-email-erro">
+<p class="field-error" id="login-email-erro"></p>
+</div>
+<div class="field">
+<label for="login-senha">Senha</label>
+<div class="pass-wrap">
+<input class="input" id="login-senha" name="senha" type="password" autocomplete="current-password" required aria-describedby="login-senha-erro">
+<button class="icon-btn pass-toggle" type="button" aria-label="Mostrar senha" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg></button>
+</div>
+<p class="field-error" id="login-senha-erro"></p>
+</div>
+<div class="form-error" role="alert" hidden></div>
+<button class="btn btn-primary btn-block" type="submit">Entrar</button>
+<div class="form-foot">
+<button class="link-btn" type="button" data-auth-view="reset">Esqueci minha senha</button>
+<button class="link-btn" type="button" data-auth-view="register">Ainda não tenho conta</button>
+</div>
+</form>
+<form class="form" id="register-form" role="tabpanel" aria-labelledby="tab-register" novalidate hidden>
+<div class="field">
+<label for="reg-nome">Nome completo</label>
+<input class="input" id="reg-nome" name="nome" type="text" autocomplete="name" required aria-describedby="reg-nome-erro">
+<p class="field-error" id="reg-nome-erro"></p>
+</div>
+<div class="field">
+<label for="reg-email">E-mail</label>
+<input class="input" id="reg-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="reg-email-erro">
+<p class="field-error" id="reg-email-erro"></p>
+</div>
+<div class="field">
+<label for="reg-celular">Celular <span class="optional">(opcional)</span></label>
+<input class="input" id="reg-celular" name="celular" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="(64) 99999-9999" aria-describedby="reg-celular-erro">
+<p class="field-error" id="reg-celular-erro"></p>
+</div>
+<div class="field">
+<label for="reg-senha">Senha</label>
+<div class="pass-wrap">
+<input class="input" id="reg-senha" name="senha" type="password" autocomplete="new-password" required aria-describedby="reg-senha-dica reg-senha-erro">
+<button class="icon-btn pass-toggle" type="button" aria-label="Mostrar senha" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg></button>
+</div>
+<div class="strength" id="reg-strength" data-level="0" aria-hidden="true"><i></i><i></i><i></i><i></i><span></span></div>
+<p class="hint" id="reg-senha-dica">Use pelo menos 8 caracteres, com letras e números.</p>
+<p class="field-error" id="reg-senha-erro"></p>
+</div>
+<label class="check"><input type="checkbox" id="reg-novidades" name="novidades"><span>Quero receber novidades e ofertas da loja, como a Black Atenas.</span></label>
+<div class="form-error" role="alert" hidden></div>
+<button class="btn btn-primary btn-block" type="submit">Criar conta</button>
+<div class="form-foot">
+<button class="link-btn" type="button" data-auth-view="login">Já tenho conta</button>
+</div>
+</form>
+<form class="form" id="reset-form" novalidate hidden aria-labelledby="auth-title">
+<p class="muted small" id="reset-intro">Como nesta prévia a conta fica salva neste aparelho, você pode definir uma nova senha aqui mesmo.</p>
+<div class="field">
+<label for="reset-email">E-mail da conta</label>
+<input class="input" id="reset-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="reset-email-erro">
+<p class="field-error" id="reset-email-erro"></p>
+</div>
+<div class="field" id="reset-senha-field">
+<label for="reset-senha">Nova senha</label>
+<div class="pass-wrap">
+<input class="input" id="reset-senha" name="senha" type="password" autocomplete="new-password" required aria-describedby="reset-senha-erro">
+<button class="icon-btn pass-toggle" type="button" aria-label="Mostrar senha" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg></button>
+</div>
+<p class="field-error" id="reset-senha-erro"></p>
+</div>
+<div class="form-error" role="alert" hidden></div>
+<button class="btn btn-primary btn-block" type="submit">Salvar nova senha</button>
+<div class="form-foot">
+<button class="link-btn" type="button" data-auth-view="login">Voltar para entrar</button>
+</div>
+</form>
+<p class="auth-note">Nesta versão do site, sua conta fica salva apenas neste aparelho e navegador.</p>
+</div>
+</div>
+</dialog>
+<!-- Minha conta -->
+<dialog class="sheet" id="account-dialog" data-lenis-prevent aria-labelledby="account-title">
+<header class="sheet-head">
+<span class="avatar" id="acc-avatar"></span>
+<div style="min-width:0">
+<h2 class="dialog-title" id="account-title">Olá</h2>
+<p class="muted small" id="acc-email" style="overflow-wrap:anywhere"></p>
+</div>
+<button class="icon-btn dialog-close" type="button" data-close aria-label="Fechar"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+</header>
+<div class="tabs" role="tablist" id="acc-tabs">
+<button class="tab" type="button" role="tab" id="acc-tab-fav" aria-selected="true" aria-controls="acc-fav">Favoritos<span class="count" id="acc-fav-count"></span></button>
+<button class="tab" type="button" role="tab" id="acc-tab-orders" aria-selected="false" aria-controls="acc-orders" tabindex="-1">Para provar<span class="count" id="acc-orders-count"></span></button>
+<button class="tab" type="button" role="tab" id="acc-tab-data" aria-selected="false" aria-controls="acc-data" tabindex="-1">Meus dados</button>
+</div>
+<div class="sheet-body">
+<section id="acc-fav" role="tabpanel" aria-labelledby="acc-tab-fav"></section>
+<section id="acc-orders" role="tabpanel" aria-labelledby="acc-tab-orders" hidden></section>
+<section id="acc-data" role="tabpanel" aria-labelledby="acc-tab-data" hidden>
+<form class="form" id="profile-form" novalidate>
+<div class="field">
+<label for="pf-nome">Nome completo</label>
+<input class="input" id="pf-nome" type="text" autocomplete="name" required aria-describedby="pf-nome-erro">
+<p class="field-error" id="pf-nome-erro"></p>
+</div>
+<div class="field">
+<label for="pf-celular">Celular <span class="optional">(opcional)</span></label>
+<input class="input" id="pf-celular" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="(64) 99999-9999" aria-describedby="pf-celular-erro">
+<p class="field-error" id="pf-celular-erro"></p>
+</div>
+<label class="check"><input type="checkbox" id="pf-novidades"><span>Quero receber novidades e ofertas da loja, como a Black Atenas.</span></label>
+<button class="btn btn-primary" type="submit" style="justify-self:start">Salvar alterações</button>
+</form>
+<div class="danger-zone">
+<h4>Excluir conta</h4>
+<p class="muted small">Apaga sua conta, seus favoritos e seus pedidos deste aparelho.</p>
+<button class="btn btn-ghost btn-sm" type="button" id="delete-start" style="justify-self:start">Excluir conta</button>
+<div class="confirm-box" id="delete-confirm" hidden>
+<p class="small">Tem certeza? Essa ação não pode ser desfeita.</p>
+<div class="row">
+<button class="btn btn-danger btn-sm" type="button" id="delete-yes">Excluir conta</button>
+<button class="btn btn-ghost btn-sm" type="button" id="delete-no">Cancelar</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<footer class="sheet-foot">
+<span class="muted small" id="acc-since"></span>
+<button class="btn btn-ghost btn-sm" type="button" id="logout-btn">Sair da conta</button>
+</footer>
+</dialog>
+<!-- Separar para provar -->
+<dialog class="modal small" id="reserve-dialog" data-lenis-prevent aria-labelledby="reserve-title">
+<div class="dialog-pad" style="position:relative">
+<button class="icon-btn dialog-close" type="button" data-close aria-label="Fechar"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+<div id="reserve-step-form" style="display:grid;gap:18px">
+<div style="display:grid;gap:8px;padding-right:36px">
+<h2 class="dialog-title" id="reserve-title">Separar para provar</h2>
+<p class="muted">Diga quando pretende ir à loja. Preparamos a mensagem para você enviar à equipe.</p>
+</div>
+<form class="form" id="reserve-form" novalidate>
+<div class="field">
+<label for="res-data">Dia da visita</label>
+<input class="input" id="res-data" type="date" required aria-describedby="res-data-erro">
+<p class="field-error" id="res-data-erro"></p>
+</div>
+<fieldset class="field">
+<legend>Período</legend>
+<div class="segmented" style="justify-self:start;margin-top:6px">
+<label class="choice"><input type="radio" name="periodo" value="manha" checked><span>Manhã</span></label>
+<label class="choice"><input type="radio" name="periodo" value="tarde"><span>Tarde</span></label>
+</div>
+</fieldset>
+<div class="field">
+<label for="res-obs">Observação <span class="optional">(opcional)</span></label>
+<textarea class="input" id="res-obs" rows="3" maxlength="280" placeholder="Ex.: prefiro armações leves"></textarea>
+</div>
+<div class="form-error" role="alert" hidden></div>
+<button class="btn btn-primary btn-block" type="submit">Preparar mensagem</button>
+</form>
+</div>
+<div id="reserve-step-done" hidden style="display:grid;gap:16px">
+<span class="done-mark" aria-hidden="true"><svg class="icon"><use href="#i-check"/></svg></span>
+<div style="display:grid;gap:8px;padding-right:36px">
+<h2 class="dialog-title" id="reserve-done-title" tabindex="-1">Mensagem pronta</h2>
+<p class="muted">Envie para a loja pelo Instagram. A equipe confirma a separação por lá.</p>
+</div>
+<label class="sr-only" for="res-mensagem">Mensagem para a loja</label>
+<textarea class="input message-box" id="res-mensagem" readonly rows="6"></textarea>
+<div class="row">
+<button class="btn btn-primary" type="button" id="res-copiar"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg><span>Copiar mensagem</span></button>
+<a class="btn btn-ghost" href="https://ig.me/m/otica_atenas" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>Abrir Instagram</a>
+</div>
+<p class="muted small">O pedido também fica salvo em Minha conta, na aba Para provar.</p>
+</div>
+</div>
+</dialog>
+<div class="grain" aria-hidden="true"></div>
+<div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+
+</body>
+</html>
