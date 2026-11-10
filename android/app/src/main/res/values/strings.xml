@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ótica Atenas</string>
+    <string name="launch_url">https://otica-atenas.vercel.app/?source=app</string>
+    <string name="asset_statements" translatable="false">
+        [{
+            \"relation\": [\"delegate_permission/common.handle_all_urls\"],
+            \"target\": {\"namespace\": \"web\", \"site\": \"https://otica-atenas.vercel.app\"}
+        }]
+    </string>
+</resources>

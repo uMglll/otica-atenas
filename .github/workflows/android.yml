@@ -1,0 +1,44 @@
+name: App Android (TWA)
+
+on:
+  push:
+    branches: [main]
+    paths: ['android/**', '.github/workflows/android.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.14.3'
+
+      - name: Gerar o AAB (sem assinatura; a assinatura é feita fora do repositório)
+        working-directory: android
+        run: |
+          set -o pipefail
+          gradle bundleRelease --no-daemon --stacktrace 2>&1 | tee build.log
+
+      - name: Publicar o resultado no branch android-build
+        if: always()
+        run: |
+          mkdir -p out
+          cp android/build.log out/ 2>/dev/null || true
+          cp android/app/build/outputs/bundle/release/app-release.aab out/ 2>/dev/null || true
+          echo "${{ job.status }} ${{ github.sha }}" > out/STATUS
+          cd out
+          git init -q -b android-build
+          git add -A
+          git -c user.name="github-actions" -c user.email="github-actions@users.noreply.github.com" commit -qm "Build ${{ github.sha }}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" android-build

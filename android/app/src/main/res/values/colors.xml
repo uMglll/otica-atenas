@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="barColor">#EDEFEA</color>
+    <color name="barColorDark">#11140F</color>
+    <color name="splashBackground">#EDEFEA</color>
+    <color name="ic_launcher_background">#F4F2EC</color>
+</resources>
