@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "br.com.oticaatenas.app",
+      "sha256_cert_fingerprints": [
+        "9C:B9:F9:31:64:FF:6C:9D:CC:65:2B:0A:AE:F4:2B:C6:A3:93:9F:03:60:65:E6:FF:3C:F0:C2:AA:1F:A8:A9:A2"
+      ]
+    }
+  }
+]

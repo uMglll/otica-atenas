@@ -1,0 +1,20 @@
+{
+  "id": "/",
+  "name": "Ótica Atenas",
+  "short_name": "Ótica Atenas",
+  "description": "Solares e receituários em Catalão – GO: coleção, provador virtual com a câmera, quiz e agendamento de visita.",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#EDEFEA",
+  "theme_color": "#EDEFEA",
+  "categories": ["shopping", "lifestyle"],
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
