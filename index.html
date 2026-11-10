@@ -508,6 +508,17 @@ textarea.input{padding: 12px 14px;min-height: 96px;resize: vertical;line-height:
 .chat-form textarea:focus{outline: none;border-color: var(--accent);box-shadow: 0 0 0 3px var(--accent-soft)}
 .chat-send{width: 44px;min-height: 44px;padding: 0;flex: none}
 .chat-note{font-size: .7rem;color: var(--muted);padding: 0 16px 10px}
+.chat-act{align-self: flex-start;margin: -6px 0 0 2px}
+.chat-flag{display: inline-flex;align-items: center;gap: 6px;min-height: 34px;padding: 4px 10px;border: 0;border-radius: 10px;background: transparent;color: var(--muted);font: 500 .78rem/1 var(--font-sans);cursor: pointer;transition: color .15s,background-color .15s}
+.chat-flag:hover,.chat-flag:focus-visible{color: var(--ink);background: var(--surface-2)}
+.chat-flag .icon{width: 15px;height: 15px}
+.chat-report{align-self: stretch;display: grid;gap: 10px;padding: 12px;border: 1px solid var(--line);border-radius: 14px;background: var(--bg)}
+.chat-report p{font-size: .88rem;line-height: 1.45}
+.chat-report .input{min-height: 42px;font-size: .95rem}
+.chat-report .row{gap: 8px}
+.chat-report .form-error{padding: 8px 12px;font-size: .82rem}
+.chat-done{align-self: flex-start;margin: -6px 0 0 8px;font-size: .8rem;color: var(--muted)}
+.adm-card .den-txt{white-space: pre-line;overflow-wrap: anywhere}
 @media (max-width: 599px){.chat-fab{width: 54px;height: 54px;padding: 0;justify-content: center}
 .chat-fab span{display: none}
 .chat-fab.is-open{display: none}
@@ -646,6 +657,7 @@ to{clip-path: inset(-20% -6% -20% -6%);transform: none}
 <symbol id="i-glasses" viewBox="0 0 24 24"><circle cx="6.5" cy="14" r="3.8"/><circle cx="17.5" cy="14" r="3.8"/><path d="M10.3 13.3c1.1-.8 2.3-.8 3.4 0M2.7 13.2 4.5 7M21.3 13.2 19.5 7"/></symbol>
 <symbol id="i-send" viewBox="0 0 24 24"><path d="M4.5 11.6 19.5 4.5l-5.6 15-2.4-6.1-7-1.8z"/><path d="m11.5 13.4 3.4-3.4"/></symbol>
 <symbol id="i-camera" viewBox="0 0 24 24"><path d="M3.5 8.6A2.6 2.6 0 0 1 6.1 6h1.8l1.5-2.1h5.2L16.1 6h1.8a2.6 2.6 0 0 1 2.6 2.6v8.3a2.6 2.6 0 0 1-2.6 2.6H6.1a2.6 2.6 0 0 1-2.6-2.6z"/><circle cx="12" cy="12.6" r="3.7"/></symbol>
+<symbol id="i-flag" viewBox="0 0 24 24"><path d="M5.5 20.5V4"/><path d="M5.5 4.5h11.8l-2.3 4.25 2.3 4.25H5.5"/></symbol>
 <symbol id="f-oval" viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="6.6" ry="9.3"/></symbol>
 <symbol id="f-redondo" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.4"/></symbol>
 <symbol id="f-quadrado" viewBox="0 0 24 24"><rect x="4.2" y="3.4" width="15.6" height="17.2" rx="4.6"/></symbol>
@@ -1085,6 +1097,7 @@ to{clip-path: inset(-20% -6% -20% -6%);transform: none}
 <button class="tab" type="button" role="tab" id="adm-tab-pedidos" aria-selected="true" aria-controls="adm-pedidos">Pedidos para provar<span class="count"></span></button>
 <button class="tab" type="button" role="tab" id="adm-tab-clientes" aria-selected="false" aria-controls="adm-clientes" tabindex="-1">Clientes</button>
 <button class="tab" type="button" role="tab" id="adm-tab-ranking" aria-selected="false" aria-controls="adm-ranking" tabindex="-1">Mais favoritados</button>
+<button class="tab" type="button" role="tab" id="adm-tab-denuncias" aria-selected="false" aria-controls="adm-denuncias" tabindex="-1">Denúncias da IA<span class="count"></span></button>
 </div>
 <div class="admin-body">
 <section id="adm-pedidos" role="tabpanel" aria-labelledby="adm-tab-pedidos">
@@ -1105,6 +1118,7 @@ to{clip-path: inset(-20% -6% -20% -6%);transform: none}
 <div id="adm-clientes-list"></div>
 </section>
 <section id="adm-ranking" role="tabpanel" aria-labelledby="adm-tab-ranking" hidden></section>
+<section id="adm-denuncias" role="tabpanel" aria-labelledby="adm-tab-denuncias" hidden></section>
 </div>
 </dialog>
 <!-- Separar para provar -->
@@ -1167,7 +1181,7 @@ to{clip-path: inset(-20% -6% -20% -6%);transform: none}
 <textarea id="chat-input" rows="1" maxlength="600" placeholder="Escreva sua dúvida…"></textarea>
 <button class="btn btn-primary chat-send" type="submit" aria-label="Enviar pergunta"><svg class="icon" aria-hidden="true"><use href="#i-send"/></svg></button>
 </form>
-<p class="chat-note">Respostas geradas por IA podem conter erros. Para preços e horários, fale com a loja.</p>
+<p class="chat-note">Respostas geradas por IA podem conter erros; use “Denunciar resposta” se algo estiver errado ou inadequado. Para preços e horários, fale com a loja.</p>
 </section>
 <div class="grain" aria-hidden="true"></div>
 <div class="toasts" id="toasts" role="status" aria-live="polite"></div>
