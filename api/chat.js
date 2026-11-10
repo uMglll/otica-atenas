@@ -1,7 +1,7 @@
 // Assistente da Ótica Atenas: recebe a conversa do site e responde com o Gemini.
 // A chave fica só no servidor, na variável de ambiente GEMINI_API_KEY da Vercel.
 
-const MODELOS = [process.env.GEMINI_MODEL, 'gemini-flash-latest', 'gemini-2.5-flash'].filter(Boolean);
+const MODELOS = [process.env.GEMINI_MODEL, 'gemini-flash-latest', 'gemini-2.5-flash', 'gemini-flash-lite-latest', 'gemini-2.5-flash-lite'].filter(Boolean);
 const MAX_MSG = 600;          // caracteres por mensagem
 const MAX_TURNOS = 12;        // mensagens de histórico enviadas ao modelo
 const LIMITE_POR_MIN = 12;    // perguntas por minuto por visitante (melhor esforço)
@@ -78,7 +78,8 @@ async function perguntar(contents) {
       continue;
     }
     ultimoErro = { status: r.status, msg: (data.error && data.error.message) || 'erro', motivo: data.error && data.error.status };
-    if (r.status !== 404) break; // só tenta outro modelo se este não existir
+    // modelo inexistente, sobrecarregado ou com erro temporário: tenta o próximo
+    if (![404, 429, 500, 503].includes(r.status)) break;
   }
   throw ultimoErro || { status: 500, msg: 'erro' };
 }
