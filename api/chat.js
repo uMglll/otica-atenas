@@ -34,6 +34,7 @@ DICAS DE FORMATO DE ROSTO
 
 COMO USAR O SITE
 - Coleção: filtre por tipo (Solares/Receituários) e por formato do rosto.
+- Quiz "Descubra o seu óculos ideal" (link Quiz no menu): cinco perguntas sobre rosto, uso, estilo, cores e prioridade; no fim mostra os 3 modelos da coleção que mais combinam, com botões de Quero provar e Favoritar.
 - Visualizador 3D (seção "Veja cada detalhe"): arraste para girar, use o zoom de 50% a 200% e troque lente (receituário/solar) e armação (tartaruga, preto, cristal).
 - Conta: botão "Entrar" no topo. Dá para criar conta com e-mail e senha ou "Continuar com o Google". Quem cria com e-mail recebe um link de confirmação.
 - Favoritos: toque no coração de um modelo. Ficam em Minha conta → Favoritos.
