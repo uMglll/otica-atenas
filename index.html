@@ -374,6 +374,40 @@ textarea.input{padding: 12px 14px;min-height: 96px;resize: vertical;line-height:
 .toast.out{opacity: 0;transform: translateY(8px);transition: opacity .25s,transform .25s}
 @keyframes toast-in{from{opacity: 0;transform: translateY(10px)}
 }
+.admin{width: min(1100px,calc(100vw - 24px));height: min(880px,calc(100dvh - 24px));display: none;flex-direction: column;overflow: hidden}
+.admin[open]{display: flex}
+.admin-head{display: flex;justify-content: space-between;align-items: flex-start;gap: 12px;padding: 22px 24px 14px}
+.admin-stats{display: grid;grid-template-columns: repeat(4,minmax(0,1fr));gap: 10px;padding: 0 24px 16px}
+.stat{background: var(--bg);border: 1px solid var(--line);border-radius: 14px;padding: 12px 14px;min-width: 0}
+.stat b{display: block;font-family: var(--font-display);font-weight: 400;font-size: 1.9rem;line-height: 1.1}
+.stat span{font-size: .8rem;color: var(--muted)}
+#admin-tabs{padding: 0 24px;overflow-x: auto}
+#admin-tabs .tab{white-space: nowrap}
+.admin-head .row{flex-wrap: nowrap}
+.admin-body{flex: 1;overflow: auto;padding: 18px 24px 24px;overscroll-behavior: contain}
+.adm-tools{display: flex;flex-wrap: wrap;gap: 10px;align-items: center;justify-content: space-between;margin-bottom: 14px}
+.adm-search{max-width: 340px;min-height: 42px}
+.adm-card{display: grid;gap: 8px;padding: 14px 16px;border: 1px solid var(--line);border-radius: var(--radius-m);background: var(--bg);min-width: 0}
+.adm-card .top{display: flex;justify-content: space-between;align-items: baseline;flex-wrap: wrap;gap: 6px 12px}
+.adm-card h4{margin: 0;font-size: 1.02rem;font-weight: 600;overflow-wrap: anywhere}
+.adm-meta{display: flex;flex-wrap: wrap;gap: 4px 14px;font-size: .85rem;color: var(--muted);overflow-wrap: anywhere}
+.adm-meta a{color: var(--ink);text-underline-offset: 3px}
+.chip-st{font-size: .75rem;font-weight: 600;padding: 3px 10px;border-radius: 999px;border: 1px solid var(--line);white-space: nowrap}
+.chip-st[data-s="novo"]{background: color-mix(in srgb,var(--warn) 20%,transparent);border-color: transparent}
+.chip-st[data-s="confirmado"]{background: color-mix(in srgb,var(--accent) 18%,transparent);border-color: transparent}
+.chip-st[data-s="concluido"]{background: color-mix(in srgb,var(--success) 18%,transparent);border-color: transparent}
+.chip-st[data-s="cancelado"]{background: color-mix(in srgb,var(--danger) 14%,transparent);border-color: transparent}
+.rank-row{display: grid;grid-template-columns: minmax(6rem,10rem) 1fr 2.5rem;gap: 12px;align-items: center;padding: 8px 0}
+.rank-bar{height: 10px;border-radius: 999px;background: var(--surface-2);overflow: hidden}
+.rank-bar i{display: block;height: 100%;border-radius: inherit;background: var(--bronze)}
+@media (max-width: 699px){.admin{width: 100vw;max-width: 100vw;height: 100dvh;max-height: 100dvh;margin: 0;border-radius: 0}
+.admin-head{padding: calc(16px + env(safe-area-inset-top,0px)) 16px 12px}
+#admin-refresh span{display: none}
+#admin-refresh{padding: 0 12px}
+.admin-stats{grid-template-columns: repeat(2,minmax(0,1fr));padding: 0 16px 14px}
+#admin-tabs{padding: 0 16px}
+.admin-body{padding: 16px 16px calc(24px + env(safe-area-inset-bottom,0px))}
+}
 html.lenis,html.lenis body{height: auto}
 .lenis.lenis-smooth{scroll-behavior: auto !important}
 .lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior: contain}
@@ -890,8 +924,44 @@ to{clip-path: inset(-20% -6% -20% -6%);transform: none}
 </div>
 <footer class="sheet-foot">
 <span class="muted small" id="acc-since"></span>
-<button class="btn btn-ghost btn-sm" type="button" id="logout-btn">Sair da conta</button>
+<div class="row"><button class="btn btn-primary btn-sm" type="button" id="admin-open" hidden>Painel da loja</button><button class="btn btn-ghost btn-sm" type="button" id="logout-btn">Sair da conta</button></div>
 </footer>
+</dialog>
+<!-- Painel da loja -->
+<dialog class="modal admin" id="admin-dialog" data-lenis-prevent aria-labelledby="admin-title">
+<div class="admin-head">
+<div><p class="muted small">Ótica Atenas · só para a equipe</p><h2 class="dialog-title" id="admin-title">Painel da loja</h2></div>
+<div class="row" style="align-items:center">
+<button class="btn btn-ghost btn-sm" type="button" id="admin-refresh"><svg class="icon" aria-hidden="true"><use href="#i-rotate"/></svg><span>Atualizar</span></button>
+<button class="icon-btn" type="button" data-close aria-label="Fechar"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+</div>
+</div>
+<div class="admin-stats" id="admin-stats"></div>
+<div class="tabs" role="tablist" id="admin-tabs">
+<button class="tab" type="button" role="tab" id="adm-tab-pedidos" aria-selected="true" aria-controls="adm-pedidos">Pedidos para provar<span class="count"></span></button>
+<button class="tab" type="button" role="tab" id="adm-tab-clientes" aria-selected="false" aria-controls="adm-clientes" tabindex="-1">Clientes</button>
+<button class="tab" type="button" role="tab" id="adm-tab-ranking" aria-selected="false" aria-controls="adm-ranking" tabindex="-1">Mais favoritados</button>
+</div>
+<div class="admin-body">
+<section id="adm-pedidos" role="tabpanel" aria-labelledby="adm-tab-pedidos">
+<div class="adm-tools">
+<div class="segmented" role="group" aria-label="Filtrar pedidos" id="adm-filtro">
+<button type="button" data-f="novo" aria-pressed="true">Novos</button>
+<button type="button" data-f="confirmado" aria-pressed="false">Confirmados</button>
+<button type="button" data-f="todos" aria-pressed="false">Todos</button>
+</div>
+</div>
+<div id="adm-pedidos-list"></div>
+</section>
+<section id="adm-clientes" role="tabpanel" aria-labelledby="adm-tab-clientes" hidden>
+<div class="adm-tools">
+<input class="input adm-search" id="adm-busca" type="search" placeholder="Buscar por nome, e-mail ou celular" aria-label="Buscar clientes">
+<button class="btn btn-ghost btn-sm" type="button" id="adm-copiar"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg><span>Copiar contatos que aceitam novidades</span></button>
+</div>
+<div id="adm-clientes-list"></div>
+</section>
+<section id="adm-ranking" role="tabpanel" aria-labelledby="adm-tab-ranking" hidden></section>
+</div>
 </dialog>
 <!-- Separar para provar -->
 <dialog class="modal small" id="reserve-dialog" data-lenis-prevent aria-labelledby="reserve-title">
